@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="nmit_res_partner_view_form" model="ir.ui.view">
+            <field name="name">Anexo Transaccional</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/> <!-- ref = id externo -->
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="ATS" string="Anexo Transaccional">
+                        <group>
+                            <group string="Grupo 1">
+                                <field name="l10n_ec_related_party" widget="boolean_toggle"/>
+                                <field name="l10n_ec_pay_residents_id" domain="[('state','=',True)]"  options="{'no_create':True}"/>
+
+                                <field name="l10n_ec_pay_residents_id_2" invisible="1"/>
+
+                                <field name="l10n_ec_type_foreign_tax_regime_id" 
+                                    domain="[('state','=',True)]" 
+                                    options="{'no_create':True}"
+                                    attrs="{'readonly': [('l10n_ec_pay_residents_id_2', '=', '01')]}"
+                                    />
+                                    
+                                <field name="l10n_ec_type_foreign_tax_regime_id_2" invisible="1"/>
+
+                                <field name="l10n_ec_country_payment_regime_id" 
+                                    domain="[('state','=',True)]" 
+                                    options="{'no_create':True}"
+                                    attrs="{'readonly': [('l10n_ec_pay_residents_id_2', '=', '01')]}"
+                                    />
+
+                                <field name="l10n_ec_tax_haven_country_id"  
+                                    options="{'no_create':True}"
+                                    attrs="{'readonly': ['|',('l10n_ec_pay_residents_id_2', '=', '01'), ('l10n_ec_type_foreign_tax_regime_id_2','!=','02')]}"
+                                    />
+
+                                <field name="l10n_ec_name_preferential_tax_regime_id"
+                                    attrs="{'readonly': ['|',('l10n_ec_pay_residents_id_2', '=', '01'), ('l10n_ec_type_foreign_tax_regime_id_2','!=','03')]}"
+                                    />
+                                <field name="l10n_ec_double_taxation_applies_id" 
+                                    widget="boolean_toggle"
+                                    attrs="{'readonly': [('l10n_ec_pay_residents_id_2', '=', '01')]}"
+                                    />
+                                <field name="l10n_ec_pay_subject_wthlg_id" 
+                                widget="boolean_toggle"
+                                attrs="{'readonly': [('l10n_ec_pay_residents_id_2', '=', '01')]}"
+                                />
+                                
+                            </group>
+
+                            <group string="Grupo 2">
+                            </group>    
+
+                         </group>                    
+                    </page>
+                </xpath>
+
+            </field>         
+        </record> 
+    
+    </data>
+    
+</odoo>

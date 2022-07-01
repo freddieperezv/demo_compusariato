@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="nmit_pay_resident_view" model="ir.ui.view">
+        <field name="name">Pago Residente</field>
+        <field name="model">l10n.ec.pay.resident</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Area">
+                <field name="name" required="1"/>
+                <field name="code" required="1"/>
+                <field name="state" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="account_wh">
+    <comprobanteRetencion id="comprobante" version="1.0.0">
+      <infoTributaria>
+        <ambiente t-esc="i.company_id.l10n_ec_env" />
+        <tipoEmision t-esc="'1'" />
+        <razonSocial t-esc="i.company_id.name" />
+        <ruc t-esc="i.company_id.partner_id.vat" />
+        <claveAcceso t-esc="i.wh_id.l10n_ec_access_key" />
+        <codDoc t-esc="i.l10n_ec_cod_doc" />
+        <estab t-esc="i.journal_id.l10n_ec_entity" />
+        <ptoEmi t-esc="i.journal_id.l10n_ec_emission" />
+        <secuencial t-esc="i.l10n_ec_sequence" />
+        <dirMatriz t-esc="i.company_id.street" />
+        <agenteRetencion
+          t-if="i.company_id.agent_number"
+          t-esc="i.company_id.agent_number"
+        />
+      </infoTributaria>
+      <infoCompRetencion>
+        <fechaEmision t-esc="i.date.strftime('%d/%m/%Y')" />
+        <dirEstablecimiento t-esc="i.company_id.street" />
+        <contribuyenteEspecial t-esc="'000'" />
+        <!-- <obligadoContabilidad t-esc="'SI'" /> -->
+        <obligadoContabilidad t-esc="i.company_id.l10n_ec_accounting" />
+        <tipoIdentificacionSujetoRetenido
+                t-esc="i.l10n_latam_identification_type_name" />
+        <razonSocialSujetoRetenido t-esc="i.partner_id.l10n_ec_name" />
+        <identificacionSujetoRetenido t-esc="i.partner_id.vat" />
+        <periodoFiscal t-esc="i.wh_id.date.strftime('%m/%Y')" />
+      </infoCompRetencion>
+      <impuestos>
+        <impuesto t-foreach="i.wh_id.tax_line_ids" t-as="line">
+          <codigo t-esc="line.tax_id.l10n_ec_tax_code" />
+          <codigoRetencion t-esc="line.tax_id.l10n_ec_wh_code" />
+          <baseImponible t-esc="line.base" />
+          <porcentajeRetener t-esc="'{:.2f}'.format(abs(line.tax_id.amount))" />
+          <valorRetenido t-esc="'{:.2f}'.format(line.amount)" />
+          <codDocSustento t-esc="line.move_id.l10n_ec_cod_doc"/>
+          <numDocSustento
+                  t-esc="line.move_id.l10n_latam_document_number.replace('-','')"
+          />
+          <fechaEmisionDocSustento t-esc="line.move_id.date.strftime('%d/%m/%Y')" />
+        </impuesto>
+      </impuestos>
+      <infoAdicional t-if="i.company_id.agent_ids">
+        <campoAdicional t-foreach="i.company_id.agent_ids" t-as="agent"
+                        t-attr-nombre="{{agent.name}}"
+                        t-esc="agent.description"
+        />
+      </infoAdicional>
+    </comprobanteRetencion>
+  </template>
+</odoo>

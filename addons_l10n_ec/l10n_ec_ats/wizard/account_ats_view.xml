@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_ats_form_view" model="ir.ui.view">
+        <field name="name">account.ats.form</field>
+        <field name="model">account.ats</field>
+        <field name="arch" type="xml">
+            <form string="AccountATS">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="company_id"/>
+                            <!-- <field name="journal_id"/>-->
+                            <field name="l10n_ec_entity" />
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_generate_ats" type="object" string="Confirm" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- -->
+    <record id="account_ats_act_window" model="ir.actions.act_window">
+        <field name="name">AccountATS</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.ats</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new AccountATS.
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="AccountATS" id="account_ats_menu"
+              parent="account.menu_finance_reports"
+              action="account_ats_act_window"/>
+</odoo>

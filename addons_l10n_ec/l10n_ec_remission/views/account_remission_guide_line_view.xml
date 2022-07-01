@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- TREE VIEW -->
+    <record id="view_account_remission_guide_line_tree" model="ir.ui.view">
+        <field name="name">account.remission.guide.line.tree</field>
+        <field name="model">account.remission.guide.line</field>
+        <field name="arch" type="xml">
+            <tree string="Remission Guide Lines">
+                <field name="guide_id" invisible="1"/>
+                <field name="picking_id"/>
+                <field name="move_id"/>
+                <field name="partner_id"/>
+                <field name="origin"/>
+                <field name="reason_id"/>
+                <field name="dau"/>
+                <field name="route_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_account_remission_guide_line_form_ec" model="ir.ui.view">
+        <field name="name">view.account.remission.guide.line.form.ec</field>
+        <field name="model">account.remission.guide.line</field>
+        <field name="arch" type="xml">
+            <form string="Remission Guide Lines">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="guide_id" invisible="1"/>
+                            <field name="invoice_ids" invisible="1"/>
+                            <field name="picking_id"/>
+                            <field name="move_id" domain="[('id','in', invoice_ids)]" options="{'no_create':True}"/>
+                            <field name="partner_id"/>
+                        </group>
+                        <group>
+                            <field name="origin"/>
+                            <field name="reason_id"/>
+                            <field name="dau"/>
+                            <field name="route_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="move_line" string="Move lines">
+                            <field name="stock_move_lines">
+                                <tree editable="bottom">
+                                    <field name="company_id" force_save="1" invisible="1"/>
+                                    <field name="product_id" force_save="1"/>
+                                    <field name="product_uom_id" force_save="1"/>
+                                    <field name="product_uom_category_id" invisible="1" force_save="1"/>
+                                    <field name="lot_id" force_save="1"/>
+                                    <field name="qty_done"/>
+                                    <field name="guide_line_id" invisible="1" force_save="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

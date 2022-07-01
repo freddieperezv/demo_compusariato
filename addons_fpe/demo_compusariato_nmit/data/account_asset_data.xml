@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+        <!-- Creating demo data that require looking for accounts -->
+        <record id="account_asset_mueble_enseres" model="account.asset">
+            <field name="name">Muebles y Enseres</field>
+            <field name="method">linear</field>
+            <field name="method_number">60</field>
+            <field name="method_period">1</field>
+            <field name="account_asset_id" model="account.account" search="[('code', '=', '120105')]"/>
+            <field name="account_depreciation_id" model="account.account" search="[('code', '=', '12011204')]"/>
+            <field name="account_depreciation_expense_id" model="account.account" search="[('code', '=', '5201210104')]"/>
+            <field name="journal_id" model="account.journal" search="[('name', '=', 'Operaciones varias')]"/>
+            <!-- <field name="account_analytic_id" model="" search="[('name', '=', 'Operaciones varias')]"/> -->
+            <field name="asset_type">purchase</field>
+            <field name="state">model</field>
+        </record>
+
+        <record id="account_asset_maquinaria" model="account.asset">
+            <field name="name">Instalaciones y Maquinarias</field>
+            <field name="method">linear</field>
+            <field name="method_number">120</field>
+            <field name="method_period">1</field>
+            <field name="account_asset_id" model="account.account" search="[('code', '=', '120106')]"/>
+            <field name="account_depreciation_id" model="account.account" search="[('code', '=', '12011205')]"/>
+            <field name="account_depreciation_expense_id" model="account.account" search="[('code', '=', '5201210105')]"/>
+            <field name="journal_id" model="account.journal" search="[('name', '=', 'Operaciones varias')]"/>
+            <field name="asset_type">purchase</field>
+            <field name="state">model</field>
+        </record>
+
+        <record id="account_asset_equipos_computo" model="account.asset">
+            <field name="name">Equipos de Computo</field>
+            <field name="method">linear</field>
+            <field name="method_number">36</field>
+            <field name="method_period">1</field>
+            <field name="account_asset_id" model="account.account" search="[('code', '=', '120108')]"/>
+            <field name="account_depreciation_id" model="account.account" search="[('code', '=', '12011207')]"/>
+            <field name="account_depreciation_expense_id" model="account.account" search="[('code', '=', '5201210107')]"/>
+            <field name="journal_id" model="account.journal" search="[('name', '=', 'Operaciones varias')]"/>
+            <field name="asset_type">purchase</field>
+            <field name="state">model</field>
+        </record> 
+
+        <record id="account_asset_vehiculo" model="account.asset">
+            <field name="name">Vehículos</field>
+            <field name="method">linear</field>
+            <field name="method_number">60</field>
+            <field name="method_period">1</field>
+            <field name="account_asset_id" model="account.account" search="[('code', '=', '120109')]"/>
+            <field name="account_depreciation_id" model="account.account" search="[('code', '=', '12011208')]"/>
+            <field name="account_depreciation_expense_id" model="account.account" search="[('code', '=', '5201210108')]"/>
+            <field name="journal_id" model="account.journal" search="[('name', '=', 'Operaciones varias')]"/>
+            <field name="asset_type">purchase</field>
+            <field name="state">model</field>
+        </record> 
+    </data>
+</odoo>

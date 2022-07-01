@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="remission">
+        <guiaRemision xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Documents and Settings\mfsalazar\Escritorio\facturación electronica\formato xsd xml 07-03\guiaRemision1.xsd" id="comprobante" version="1.0.0">
+            <infoTributaria>
+                <ambiente t-esc="i.company_id.l10n_ec_env" />
+                <tipoEmision t-esc="'1'" />
+                <razonSocial t-esc="i.company_id.name" />
+                <nombreComercial t-esc="i.company_id.name"/>
+                <ruc t-esc="i.company_id.partner_id.vat" />
+                <claveAcceso t-esc="i.l10n_ec_access_key" />
+                <codDoc t-esc="i.l10n_ec_cod_doc" /> 
+                <estab t-esc="i.journal_id.l10n_ec_entity" />
+                <ptoEmi t-esc="i.journal_id.l10n_ec_emission" />
+                <secuencial t-esc="i.l10n_ec_sequence" />
+                <dirMatriz t-esc="i.company_id.street" />
+                <agenteRetencion 
+                    t-if="i.company_id.agent_number" 
+                    t-esc="i.company_id.agent_number"
+                />
+                <contribuyenteRimpe t-if="i.company_id.micro_business">CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>  
+            </infoTributaria>
+            <infoGuiaRemision>
+                <dirEstablecimiento t-esc="i.address_from" />
+                <dirPartida  t-esc="i.address_from" />
+                <razonSocialTransportista t-esc="i.partner_id._l10n_ec_direction()" />
+                <tipoIdentificacionTransportista t-esc="i.l10n_latam_identification_type_name" />
+                <rucTransportista t-esc="i.partner_id.vat" />
+                <!-- <rise t-esc="" /> -->
+                <obligadoContabilidad t-esc="i.company_id.l10n_ec_accounting" />
+                <contribuyenteEspecial t-if="i.company_id.agent_number" t-esc="i.company_id.agent_number"/>
+                <fechaIniTransporte t-esc="i.date_start.strftime('%d/%m/%Y')" />
+                <fechaFinTransporte t-esc="i.date_end.strftime('%d/%m/%Y')" />
+                <placa t-esc="i.license_plate"/>
+            </infoGuiaRemision>
+            <destinatarios>
+                <destinatario t-foreach="i.line_ids" t-as="line" >
+                    <identificacionDestinatario t-esc="line.picking_id.partner_id.vat" />
+                    <razonSocialDestinatario t-esc="line.picking_id.partner_id.name" />
+                    <dirDestinatario t-esc="line.partner_id.street"/>
+                    <motivoTraslado  t-field="line.reason_id" />
+                    <docAduaneroUnico  t-esc="line.dau" t-if="line.dau"/>
+                    <!-- <codEstabDestino  t-esc="" /> -->
+                    <ruta t-field="line.route_id" t-if="line.route_id"/>
+                    <codDocSustento t-esc='line.move_id.l10n_latam_document_type_id_code' />
+                    <numDocSustento t-esc='line.move_id.l10n_latam_document_number' />
+                    <numAutDocSustento t-esc='line.move_id.l10n_ec_auth_number' />
+                    <fechaEmisionDocSustento t-if="line.move_id" t-esc='line.move_id.invoice_date.strftime("%d/%m/%Y")' />
+                    <detalles>
+                        <detalle t-foreach="line.stock_move_lines" t-as="move" >
+                            <codigoInterno t-esc='move.product_id.default_code' />
+                            <codigoAdicional t-esc='move.product_id.barcode' />
+                            <descripcion t-esc='move.product_id.name' />
+                            <cantidad t-esc="'{:.2f}'.format(move.qty_done)"/>
+                            <detallesAdicionales t-if="move.product_id.tracking == 'lot'" >
+                                <detAdicional t-att-nombre="move.product_id.tracking == 'lot' and 'lote' or 'serie'" t-att-valor="move.lot_id.name"/>
+                            </detallesAdicionales>
+                        </detalle>
+                    </detalles>
+                </destinatario>
+            </destinatarios>
+        </guiaRemision>
+    </template>
+</odoo>

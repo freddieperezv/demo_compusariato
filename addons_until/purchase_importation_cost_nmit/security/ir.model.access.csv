@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_import_folder,acceso a la carpeta de importaciones,model_import_folder,group_purchase_importation_user,1,1,1,0
+access_user_import_folder_type,acceso a los tipos de importación,model_import_folder_type,group_purchase_importation_user,1,1,1,0
+access_user_import_folder_tag,etiquetas de carpetas,model_import_folder_tag,group_purchase_importation_user,1,1,1,0
+access_user_stock_landed_report,acceso al reporte de importación,model_stock_landed_report,group_purchase_importation_user,1,1,1,0
+access_user_all_import_folder,acceso a la carpeta de importaciones,model_import_folder,group_purchase_importation_user_all,1,1,1,0
+access_user_all_import_folder_type,acceso a los tipos de importación,model_import_folder_type,group_purchase_importation_user_all,1,1,1,0
+access_user_all_folder_tag,etiquetas de carpetas,model_import_folder_tag,group_purchase_importation_user_all,1,1,1,0
+access_user_all_stock_landed_report,acceso al reporte de importación,model_stock_landed_report,group_purchase_importation_user_all,1,1,1,0
+access_admin_import_folder,acceso a la carpeta de importaciones,model_import_folder,group_purchase_importation_administrator,1,1,1,1
+access_admin_import_folder_type,acceso a los tipos de importación,model_import_folder_type,group_purchase_importation_administrator,1,1,1,1
+access_admin_import_folder_tag,etiquetas de carpetas,model_import_folder_tag,group_purchase_importation_administrator,1,1,1,1
+access_admin_stock_landed_report,acceso al reporte de importación,model_stock_landed_report,group_purchase_importation_administrator,1,1,1,1

@@ -1,0 +1,3 @@
+"id","sequence","code","name","report_name","internal_type","doc_code_prefix","country_id/id","active","l10n_ec_check_format"
+"ec_dt_07",7,"07","Documento retención presuntiva y retención emitida por el cliente o el intermediario","Documento retención presuntiva y retención emitida por el cliente o por intermediario","invoice","RET","base.ec",1,0
+"ec_dt_00",00,"00","Documento Interno","Documento Interno","invoice","INT","base.ec",1,0

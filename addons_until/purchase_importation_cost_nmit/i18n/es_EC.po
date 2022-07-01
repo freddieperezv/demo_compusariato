@@ -1,0 +1,1005 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_importation_cost_nmit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-15 22:33+0000\n"
+"PO-Revision-Date: 2022-02-15 22:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_account_account
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__account_move_id
+msgid "Account movement"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_ids
+msgid "Activities"
+msgstr "Actividad"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Tipo de Icono de Actividad"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__additional_landed_cost
+msgid "Additional Landing Cost"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:res.groups,name:purchase_importation_cost_nmit.group_purchase_importation_administrator
+msgid "Administrator"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Amount Due"
+msgstr "Monto Adeudado"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__amount_total
+msgid "Amount Total"
+msgstr "Monto Total"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#, python-format
+msgid "Amount Total landing cost"
+msgstr "Total de Gastos de Envío"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__bl
+#, python-format
+msgid "B/L #"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Bill Date"
+msgstr "Fecha de factura"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__bl
+msgid "Bill of lading"
+msgstr "Documento de embarque"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__split_method__by_current_cost_price
+msgid "By Current Cost"
+msgstr "Por Costo Actual"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__split_method__by_quantity
+msgid "By Quantity"
+msgstr "Por Cantidad"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__split_method__by_volume
+msgid "By Volume"
+msgstr "Por Volumen"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__split_method__by_weight
+msgid "By Weight"
+msgstr "Por Peso"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__color
+msgid "Color"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_import_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__container
+#, python-format
+msgid "Container"
+msgstr "Contenedor"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__cost_id
+msgid "Cost #"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_cost__cost_lines
+msgid "Cost Lines"
+msgstr "Líneas de costo"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.actions.act_window,help:purchase_importation_cost_nmit.folder_tag_action
+msgid "Create Folder Tags"
+msgstr "Crea etiquetas de Carpeta"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__create_uid
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__create_uid
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__create_date
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__create_date
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__customs_regime
+#, python-format
+msgid "Customs Regime"
+msgstr "Régimen"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__dai
+#, python-format
+msgid "DAI #"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__elaboration_date
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__admission_date
+msgid "Date of entry into the warehouse"
+msgstr "Fecha de ingreso al almacén"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__boarding_date
+msgid "Date of shipment of the merchandise"
+msgstr "Fecha de envío de la mercadería según la planificación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__display_name
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__display_name
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__display_name
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__split_method
+msgid "Division Method"
+msgstr "Método de División"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__import_folder__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__state__draft
+msgid "Draft Quotation"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__admission_date
+#, python-format
+msgid "Entry Warehouse Date"
+msgstr "Ingreso"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__split_method__equal
+msgid "Equal"
+msgstr "Igual"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__estimated_date
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__estimated_date
+#, python-format
+msgid "Estimated Arrival Date"
+msgstr "Arribo"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__final_cost
+msgid "Final Cost"
+msgstr "Costo Final"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#, python-format
+msgid "Final Product Cost(Per unit)"
+msgstr "Costo final del Producto(Por unidad)"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__import_folder__state__close
+msgid "Finished"
+msgstr "Finalizado"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_import_folder
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+#, python-format
+msgid "Folder"
+msgstr "Carpeta"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_import_folder_tag
+msgid "Folder Tag"
+msgstr "Etiqueta"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Folder name"
+msgstr "Nombre de Carpeta"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.actions.act_window,name:purchase_importation_cost_nmit.import_folder_action
+msgid "Folders"
+msgstr "Carpetas"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "Group By"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__import_folder_father
+msgid "Have Parent Folder?"
+msgstr "Tiene Carpeta Padre"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__id
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__id
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__id
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_needaction
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_has_error
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_import_folder
+msgid "Import"
+msgstr "Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__import_folder
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_account_invoice_import
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_account_payment_import
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_purchase_order_import
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_stock_landed_cost_import
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_stock_picking_import
+msgid "Import Folder"
+msgstr "Carpeta Imp."
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__real_days
+msgid "Import Time(Days)"
+msgstr "Duración (Días)"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_import_folder_type
+msgid "Import Type"
+msgstr "Tipo Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__dai
+msgid "Import customs declaration"
+msgstr "Declaración Aduanera de Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.module.category,name:purchase_importation_cost_nmit.module_category_purchase_importation_sub
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_importation
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_root
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_tree
+msgid "Importation"
+msgstr "Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Importation Folder"
+msgstr "Carpeta de Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_bank_statement_line__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_move__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_payment__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_payment_register__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_purchase_order__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_cost__import_ids
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_picking__import_ids
+msgid "Imports"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__cellar
+#, python-format
+msgid "Input Warehouse"
+msgstr "Almacén"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_account__international
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_res_partner__international
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_res_users__international
+msgid "International"
+msgstr "Internacional"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_cost_lines__invoice_id
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Invoice Date"
+msgstr "Fecha de Factura"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__account_journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.actions.act_window,name:purchase_importation_cost_nmit.action_cost_report_all
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__stock_landed_ids
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_landed_pivot
+msgid "Landed Cost"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_import_menu_stock_landed_cost
+msgid "Landed Costs"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder____last_update
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag____last_update
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type____last_update
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__write_uid
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__write_uid
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__write_date
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__write_date
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__nbr
+msgid "Lines Number"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Liquidation"
+msgstr "Liquidación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__name
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_type__name
+msgid "Name"
+msgstr "Carpeta"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#, python-format
+msgid "New Cost"
+msgstr "Valoración"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.actions.act_window,help:purchase_importation_cost_nmit.import_folder_action
+msgid "No Import Folder created yet!"
+msgstr "No ha creado una carpeta aún!"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__import_folder__priority__0
+msgid "Normal"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__real_days
+msgid "Number of days from the date of shipment and the date of arrival"
+msgstr "Cantidad de dias desde la fecha de envío y la fecha de arribo"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__import_folder__state__open
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "Open"
+msgstr "Abierto"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__import_id
+msgid "Parent Folder"
+msgstr "Carpeta Padre"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_account_payment
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__payment_ids
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__stock_ids
+msgid "Pickings"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__former_cost
+#, python-format
+msgid "Previous Cost"
+msgstr "Costo Anterior"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__former_cost_per_unit
+#, python-format
+msgid "Previous Cost(Per unit)"
+msgstr "Costo Anterior(Por unidad)"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.actions.act_window,help:purchase_importation_cost_nmit.action_cost_report_all
+msgid "Print Report Landed Cost"
+msgstr "Distribución de Costos"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__priority
+msgid "Priority"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__product_id
+#, python-format
+msgid "Product"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__name_product
+msgid "Product Name"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Purchase"
+msgstr "Pedido de Compra"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.module.category,name:purchase_importation_cost_nmit.module_category_purchase_importation
+msgid "Purchase for importation"
+msgstr "Compra por importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__purchase_ids
+msgid "Purchases"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__quantity
+#, python-format
+msgid "Quantity"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__name
+msgid "Reference"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_account_payment_register
+msgid "Register Payment"
+msgstr "Registrar pago"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Reopen"
+msgstr "Reabrir"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model,name:purchase_importation_cost_nmit.model_stock_landed_report
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_stock_landed_cost_import
+#, python-format
+msgid "Report Landed Cost"
+msgstr "Distribución de Costos"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.stock_stock_landed_report_menu
+msgid "Reporte de Gastos de Envio"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_bank_statement_line__require_import
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_move__require_import
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_account_payment__require_import
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_purchase_order__require_import
+msgid "Required Import"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__responsable
+msgid "Responsable"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__stock_landed_report__state__done
+msgid "Sales Done"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Sales Person"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "Search Folder"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__boarding_date
+#, python-format
+msgid "Shipping Date"
+msgstr "Envío"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Source Document"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Start"
+msgstr "Iniciar"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__state
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__state
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "State"
+msgstr "Estado"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_cost_product_pivot
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_cost_product_search
+msgid "Stock Landed Analysis"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Costo en destino"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_stock_landed_cost_lines
+msgid "Stock Landed Cost Line"
+msgstr "Línea de coste en destino"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Stock Moves"
+msgstr "Recepción"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__tag
+#: model:ir.ui.menu,name:purchase_importation_cost_nmit.menu_import_tag
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "Tag"
+msgstr "Etiqueta"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder_tag__name
+msgid "Tag Name"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.constraint,message:purchase_importation_cost_nmit.constraint_import_folder_tag_name_uniq
+msgid "Tag name already exists !"
+msgstr "Etiqueta ya existe!"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.actions.act_window,name:purchase_importation_cost_nmit.folder_tag_action
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.folder_tag_view_form
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.folder_tag_view_tree
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Tax"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Tax Excluded"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_res_partner__international
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_res_users__international
+msgid ""
+"This field is used in the import process, it should only be activated if it "
+"is a external supplier, when activated it will force the entry of the import"
+" folder field in the Purchase Order"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_account_account__international
+msgid ""
+"This field is used in the import process, it should only be activated if, "
+"when using this accounting account, you must request the mandatory entry of "
+"the import folder field in the supplier invoice"
+msgstr ""
+"Este campo se utiliza en el proceso de importación, solo se debe activar si "
+"al utilizar esta cuenta se debe solicitar el ingreso obligatorio del campo "
+"carpeta de importación en la factura del proveedor"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Total"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model,name:purchase_importation_cost_nmit.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_cost__picking_ids
+msgid "Transfers"
+msgstr "Transferencias"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#, python-format
+msgid "Type"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__type_import
+msgid "Type Import"
+msgstr "Tipo Importación"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__price_unit
+msgid "Unit Cost"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#, python-format
+msgid "Unit Measure"
+msgstr "Unidad de Medida"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields.selection,name:purchase_importation_cost_nmit.selection__import_folder__priority__1
+msgid "Urgent"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.actions.act_window,help:purchase_importation_cost_nmit.folder_tag_action
+msgid "Use Tags to manage and track your Folders"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:res.groups,name:purchase_importation_cost_nmit.group_purchase_importation_user_all
+msgid "User: All Documents"
+msgstr "Mostrar todos los documentos"
+
+#. module: purchase_importation_cost_nmit
+#: model:res.groups,name:purchase_importation_cost_nmit.group_purchase_importation_user
+msgid "User: Own Documents Only"
+msgstr "Usuario: Documentos propios"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_cost__valuation_adjustment_lines
+msgid "Valuation Adjustments"
+msgstr "Ajustes de valorización"
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_import_folder_form
+msgid "Vendor"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__volume
+#, python-format
+msgid "Volumen"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__cellar
+msgid "Warehouse to which the merchandise enters"
+msgstr "Almacén al que ingresa la mercadería"
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_import_folder__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model:ir.model.fields,help:purchase_importation_cost_nmit.field_import_folder__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/report_landed_cost.py:0
+#: model:ir.model.fields,field_description:purchase_importation_cost_nmit.field_stock_landed_report__weight
+#, python-format
+msgid "Weight"
+msgstr "Peso"
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/account_invoice.py:0
+#, python-format
+msgid ""
+"You are using account that is used for imports, you must assign the "
+"corresponding import folder to confirm the document."
+msgstr ""
+"Está usando una cuenta contable que se usa para importaciones, debe asignar "
+"la carpeta de importación que le corresponda para poder confirmar el "
+"documento."
+
+#. module: purchase_importation_cost_nmit
+#: code:addons/purchase_importation_cost_nmit/models/purchase_order.py:0
+#, python-format
+msgid ""
+"You are using an international provider, you must assign the corresponding "
+"import folder."
+msgstr ""
+"Está usando un proveedor internacional, debe asignar la carpeta de "
+"importación que le corresponde."
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.folder_tag_view_form
+msgid "e.g. Services"
+msgstr ""
+
+#. module: purchase_importation_cost_nmit
+#: model_terms:ir.ui.view,arch_db:purchase_importation_cost_nmit.view_folder_filter
+msgid "folder open"
+msgstr "Carpeta abierta"

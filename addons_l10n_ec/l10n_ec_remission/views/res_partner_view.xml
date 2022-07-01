@@ -1,0 +1,46 @@
+<odoo>
+
+    <record id="res_partner_remission_form_view" model="ir.ui.view">
+        <field name="name">res.partner.remission.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='sales_purchases']//field[@name='property_supplier_payment_term_id']" position="after">
+                <field name="is_carrier" string="Es transportista"/>
+            </xpath>    
+
+            <page name="sales_purchases" position="after">
+                <page
+                    name="carrier_information"
+                    string="Información del transportista"
+                    attrs="{'invisible': [('is_carrier', '=', False)]}">
+
+                    <group>
+                        <group>
+                            <field name="cont_especial"/>
+                            <field name="rise" string="RIMPE"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="res_partner_view_search_carrier" model="ir.ui.view">
+        <field name="name">res.carrier.select</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.res_partner_view_search" />
+        <field name="arch" type="xml">
+            <filter name="supplier" position="after">
+                <filter
+                    string="Transportista"
+                    name="is_carrier"
+                    domain="[('is_carrier', '=', 1)]"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="l10n_ec_nmitfix.list">
+      <field name="name">l10n_ec_nmitfix list</field>
+      <field name="model">l10n_ec_nmitfix.l10n_ec_nmitfix</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="l10n_ec_nmitfix.action_window">
+      <field name="name">l10n_ec_nmitfix window</field>
+      <field name="res_model">l10n_ec_nmitfix.l10n_ec_nmitfix</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="l10n_ec_nmitfix.action_server">
+      <field name="name">l10n_ec_nmitfix server</field>
+      <field name="model_id" ref="model_l10n_ec_nmitfix_l10n_ec_nmitfix"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="l10n_ec_nmitfix" id="l10n_ec_nmitfix.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="l10n_ec_nmitfix.menu_1" parent="l10n_ec_nmitfix.menu_root"/>
+    <menuitem name="Menu 2" id="l10n_ec_nmitfix.menu_2" parent="l10n_ec_nmitfix.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="l10n_ec_nmitfix.menu_1_list" parent="l10n_ec_nmitfix.menu_1"
+              action="l10n_ec_nmitfix.action_window"/>
+    <menuitem name="Server to list" id="l10n_ec_nmitfix" parent="l10n_ec_nmitfix.menu_2"
+              action="l10n_ec_nmitfix.action_server"/>
+-->
+  </data>
+</odoo>

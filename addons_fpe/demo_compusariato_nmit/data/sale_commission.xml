@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- Create the Commission Types -->
+        <record id="demo_commission" model="sale.commission">
+            <field name="name">10% Comisión Fija - Basado en la Facturación</field>
+            <field name="fix_qty">10.0</field>
+        </record>
+        <record id="demo_commission_paid" model="sale.commission">
+            <field name="name">20% Comisión Fija - Basado en el Pago</field>
+            <field name="fix_qty">20.0</field>
+            <field name="invoice_state">paid</field>
+        </record>
+    </data>
+</odoo>    

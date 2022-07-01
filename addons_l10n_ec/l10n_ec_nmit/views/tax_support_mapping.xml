@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_l10n_ec_tax_support_mapping_form" model="ir.ui.view">
+        <field name="name">Mapeo sustento tributario vs. tipo de documento</field>
+        <field name="model">l10n.ec.tax.support.mapping</field>
+        <field name="arch" type ="xml">              
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group string="Sustento Tributario por tipo de documento">
+                        <group>
+                            <field name="doc_type_id" required="1"></field>                   
+                            <field name="tax_support_id" required="1"></field>
+                            <field name="identification_type_ids"></field>
+                            <field name="state" widget="boolean_toggle"></field>                            
+                        </group>
+                        <group>                            
+                        </group>  
+                    </group>                         
+                </sheet>
+            </form>                        
+        </field>
+    </record>
+
+
+    <record id="view_l10n_ec_tax_support_mapping_tree" model="ir.ui.view">
+        <field name="name">Sustento Tributario vs. Tipo de Documento</field>
+        <field name="model">l10n.ec.tax.support.mapping</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="doc_type_id" />
+                <field name="tax_support_id" />
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="action_tax_support_mapping" model="ir.actions.act_window">
+        <field name="name">Tax Support Map</field>
+        <field name="res_model">l10n.ec.tax.support.mapping</field>
+        <field name="view_mode">tree,form</field>
+    </record>   
+
+    <menuitem id="menu_tax_support_mapping"
+              name="Tax Support Mapping"
+              action="action_tax_support_mapping"
+              sequence="51"
+              parent="account.account_account_menu"
+    />     
+</odoo>

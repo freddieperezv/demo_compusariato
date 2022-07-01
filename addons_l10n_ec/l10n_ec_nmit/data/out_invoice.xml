@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="out_invoice">
+  <factura id="comprobante" version="2.1.0">
+    <infoTributaria>
+      <ambiente t-esc="i.company_id.l10n_ec_env" />
+      <tipoEmision t-esc="'1'" />
+      <razonSocial t-esc="i.company_id.name" />
+      <nombreComercial t-esc="i.company_id.name" />
+      <ruc t-esc="i.company_id.partner_id.vat" />
+      <claveAcceso t-esc="i.l10n_ec_access_key" />
+      <codDoc t-esc="i.l10n_ec_cod_doc" />
+      <estab t-esc="i.journal_id.l10n_ec_entity" />
+      <ptoEmi t-esc="i.journal_id.l10n_ec_emission" />
+      <secuencial t-esc="i.l10n_ec_sequence" />
+      <dirMatriz t-esc="i.company_id.partner_id._l10n_ec_direction() or ''" />
+      <agenteRetencion t-if="i.company_id.agent_number" t-esc="i.company_id.agent_number"/>
+      <contribuyenteRimpe t-if="i.company_id.micro_business">CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>  
+    </infoTributaria>
+    <infoFactura>
+      <fechaEmision t-esc="i.invoice_date.strftime('%d/%m/%Y')" />
+      <dirEstablecimiento t-esc="i.journal_id.l10n_ec_emission_address_id._l10n_ec_direction() or ''" />
+      <contribuyenteEspecial t-if="i.company_id.taxpayer_number" t-esc="i.company_id.taxpayer_number"/>
+      <obligadoContabilidad t-esc="i.company_id.l10n_ec_accounting"/>
+      <tipoIdentificacionComprador
+              t-esc="i.l10n_latam_identification_type_name" />
+      <razonSocialComprador t-esc="i.partner_id.l10n_ec_name" />
+      <identificacionComprador t-esc="i.partner_id.vat" />
+      <direccionComprador t-esc="i.l10n_ec_partner_address" />
+      <totalSinImpuestos  t-esc="i.amount_untaxed" />
+      <totalDescuento t-esc="i.l10n_ec_total_discount" />
+      <totalConImpuestos>
+        <totalImpuesto t-foreach="i._tax_group.items()" t-as="tax">
+          <codigo t-esc="tax[1].get('code')" />
+          <codigoPorcentaje t-esc="tax[1].get('code_porcent', 0)" />
+          <baseImponible t-esc="i.decimal_reports(tax[1].get('base', 0))" />
+          <tarifa t-esc="tax[1].get('tarifa', 0)" />
+          <valor t-esc="i.decimal_reports(tax[1].get('amount', 0))" />
+        </totalImpuesto>
+      </totalConImpuestos>
+      <compensaciones t-if="compensaciones">
+          <compensacion t-foreach="compensaciones" t-as="c">
+              <codigo t-esc="c['codigo']" />
+              <tarifa t-esc="c['tarifa']" />
+              <valor t-esc="c['valor']" />
+          </compensacion>
+      </compensaciones>
+      <propina>0.00</propina>
+      <importeTotal t-esc="'{:.2f}'.format(i.amount_total)" />
+      <moneda t-esc="i.currency_id.l10n_ec_currency or 'DOLAR'"/>
+      <pagos>
+          <pago>
+              <formaPago t-esc="i.l10n_ec_sri_payment_id.code" />
+              <total t-esc="'{:.2f}'.format(i.amount_total)" />
+          </pago>
+      </pagos>
+    </infoFactura>
+    <detalles>
+      <detalle t-foreach="i.invoice_line_ids" t-as="line">
+        <codigoPrincipal t-esc="line.product_id.l10n_ec_code" />
+        <descripcion t-esc="line.product_id.l10n_ec_description" />
+        <cantidad t-esc="'{:.6f}'.format(line.quantity)" />
+        <precioUnitario t-esc="'{:.6f}'.format(line.price_unit)" />
+        <descuento t-esc="line.l10n_ec_discount" />
+        <precioTotalSinImpuesto t-esc="'{:.2f}'.format(line.price_subtotal)" />
+        <impuestos t-if="line.l10n_ec_line_taxes">
+          <impuesto t-foreach="line.l10n_ec_line_taxes" t-as="tax">
+            <codigo t-esc="tax('codigo')" />
+            <codigoPorcentaje t-esc="tax('codigoPorcentaje')" />
+            <tarifa t-esc="tax('tarifa')" />
+            <baseImponible t-esc="tax('baseImponible')" />
+            <valor t-esc="tax('valor')" />
+          </impuesto>
+        </impuestos>
+      </detalle>
+    </detalles>
+    <infoAdicional> 
+      <campoAdicional nombre="Email" t-esc="i.partner_id.email" />
+      <campoAdicional nombre="Direccion" t-esc="i.partner_id._l10n_ec_direction()" />
+      <campoAdicional nombre="Telefono" t-esc="i.partner_id.phone" />
+      <campoAdicional nombre="Pedido" t-esc="i.invoice_origin" /> 
+    </infoAdicional>
+  </factura>
+  </template>
+</odoo>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="stock_kardex_pdf_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <tr t-foreach="o.get_warehouses()" t-as="warehouse">
+                                <span><strong>Warehouse: </strong></span><strong></strong><span t-field="warehouse.display_name"/><br/>
+                                <span><strong>Product: </strong></span><strong></strong><span t-field="o.product_id"/><br/>
+                                <span><strong>Date from: </strong></span><strong></strong><span t-field="o.date_from"/><br/>
+                                <span><strong>Date to: </strong></span><strong></strong><span t-field="o.date_to"/><br/>
+                                <span><strong>Valuation: </strong></span><strong></strong><span t-field="o.product_id.categ_id.property_cost_method"/><br/>
+                                <table class="table table-bordered" style="font-size: 10px;">
+                                    <thead>
+                                        <tr>
+                                            <th t-att-colspan="o._get_positions().index('location_dest_id') + 1" ><span /></th>
+                                            <th colspan="3">Incoming</th>
+                                            <th colspan="3">Outgoing</th>
+                                            <th colspan="3">Total Balance</th>
+                                        </tr>
+                                        <tr>
+                                            <th id="th_date">Date</th>
+                                            <th id="th_move_type">Direction</th>
+                                            <th id="th_transaction_type">Transaction Type</th>
+                                            <th id="th_picking_type_id">Operation Name</th>
+                                            <th id="th_doc_number">Document Number</th>
+                                            <th id="th_lot_id">Lot</th>
+                                            <th id="th_partner_id">Partner</th>
+                                            <th id="th_warehouse_id">Warehouse</th>
+                                            <th id="th_location_id">Origin Location</th>
+                                            <th id="th_location_dest_id">Destination Location</th>
+                                            <th id="th_input_product_qty">Quantity</th>
+                                            <th id="th_input_unit_cost">Cost Unit</th>
+                                            <th id="th_input_value">Total Cost</th>
+                                            <th id="th_output_product_qty">Quantity</th>
+                                            <th id="th_output_unit_cost">Cost Unit</th>
+                                            <th id="th_output_value">Total Cost</th>
+                                            <th id="th_balance_product_qty">Quantity</th>
+                                            <th id="th_balance_unit_cost">Cost Unit</th>
+                                            <th id="th_balance_value">Total Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <t t-set="reports" t-value="o.get_data_report(warehouse)" />
+                                    <tbody>
+                                        <t t-set="initial_data" t-value="o.get_initial_data(o.product_id, warehouse)"></t>
+                                        <t t-set="last_qty_available" t-value="initial_data[0]"></t>
+                                        <t t-set="current_value" t-value="initial_data[1]"></t>
+                                        <t t-set="unit_cost" t-value="initial_data[2]"></t>
+                                        <tr>
+                                            <td colspan="16" />
+                                            <td class="text-right"><span t-esc="last_qty_available" t-options="{'widget': 'float', 'precision': o.get_uom_precision()}"></span></td>
+                                            <td class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-esc="unit_cost" t-options="{'widget': 'float', 'precision': o.get_cost_precision()}"></span></td>
+                                            <td class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-esc="current_value" t-options="{'widget': 'float', 'precision': o.get_account_precision()}"></span></td>
+                                        </tr>
+                                        <tr t-foreach="reports" t-as="report">
+                                            <t t-set="last_qty_available" t-value="last_qty_available + report.product_qty" />
+                                            <t t-set="current_value" t-value="current_value + report.value" />
+                                            <t t-set="unit_cost" t-value="report.price_unit" />
+                                            <td id="date"><span t-field="report.date"></span></td>
+                                            <td id="move_type"><span t-field="report.move_type"></span></td>
+                                            <td id="transaction_type"><span t-field="report.transaction_type"></span></td>
+                                            <td id="picking_type_id"><span t-field="report.picking_type_id"></span></td>
+                                            <td id="doc_number"><span t-esc="report.get_document_number()"></span></td>
+                                            <td id="lot_id"><span t-esc="' / '.join(lot.display_name for lot in report.move_id.mapped('move_line_ids.lot_id'))"></span></td>
+                                            <td id="partner_id"><span t-field="report.partner_id"></span></td>
+                                            <td id="warehouse_id"><span t-field="warehouse.display_name"></span></td>
+                                            <td id="location_id"><span t-field="report.move_id.location_id.name"></span></td>
+                                            <td id="location_dest_id"><span t-field="report.move_id.location_dest_id.name"></span></td>
+                                            <td id="input_product_qty" class="text-right"><span t-if="report.move_type == 'input'"  t-field="report.product_qty"/><span t-if="report.move_type != 'input'">0.0</span></td>
+                                            <td id="input_unit_cost" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type == 'input'" t-field="report.price_unit"/><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type != 'input'">0.0</span></td>
+                                            <td id="input_value" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type == 'input'" t-field="report.value"/><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type != 'input'">0.0</span></td>
+                                            <td id="output_product_qty" class="text-right"><span t-if="report.move_type == 'output'" t-field="report.product_qty"/><span t-if="report.move_type != 'output'">0.0</span></td>
+                                            <td id="output_unit_cost" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type == 'output'" t-field="report.price_unit"/><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type != 'output'">0.0</span></td>
+                                            <td id="output_value" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type == 'output'" t-field="report.value"/><span groups="kardex_nmit.group_show_cost_kardex" t-if="report.move_type != 'output'">0.0</span></td>
+                                            <td id="balance_product_qty" class="text-right"><span t-esc="last_qty_available" t-options="{'widget': 'float', 'precision': o.get_uom_precision()}"></span></td>
+                                            <td id="balance_unit_cost" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-esc="unit_cost" t-options="{'widget': 'float', 'precision': o.get_cost_precision()}"></span></td>
+                                            <td id="balance_value" class="text-right"><span groups="kardex_nmit.group_show_cost_kardex" t-esc="current_value" t-options="{'widget': 'float', 'precision': o.get_account_precision()}"></span></td>
+                                        </tr>
+                                        <tr t-foreach="o._get_locations(warehouse)" t-as="location">
+                                            <td colspan="15"><span /></td>
+                                            <td><span t-field="location.display_name" /></td>
+                                            <td class="text-right"><span t-esc="o._get_qty_available(o.product_id.with_context({'location': location.id}),lot=o.lot_id ,to_date=o.date_to)" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record id="report_kardex_report" model="report.paperformat">
+            <field name="name">Formato Vertical Kardex</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">2</field>
+            <field name="margin_bottom">2</field>
+            <field name="margin_left">2</field>
+            <field name="margin_right">2</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+        </record>
+
+        <record id="action_report_kardex_pdf" model="ir.actions.report">
+            <field name="name">kardex_nmit.stock_kardex_pdf_report</field>
+            <field name="paperformat_id" ref="kardex_nmit.report_kardex_report"/>
+            <field name="model">stock.kardex.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kardex_nmit.stock_kardex_pdf_report</field>                     
+            <field name="report_file">kardex_nmit.stock_kardex_pdf_report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="nmit_country_payment_regime_view" model="ir.ui.view">
+        <field name="name">País   de   residencia   o establecimiento permanente  a  quién  se efectúa el pago</field>
+        <field name="model">l10n.ec.country.payment.regime</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="País">
+                <field name="name" required="1"/>
+                <field name="code" required="1"/>
+                <field name="state" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="staring_sec_tree_view" model="ir.ui.view">
+        <field name="name">account.l10n.ec.staring.sec.tree</field>
+        <field name="model">account.l10n.ec.staring.sec</field>
+        <field name="arch" type="xml">
+            <tree string="Staring Sec" editable="bottom">
+                <field name="journal_id" />
+                <field name="l10n_latam_document_type_id" />
+                <field name="number" />
+            </tree>
+        </field>
+    </record>
+    <record id="in_staring_sec_act_window" model="ir.actions.act_window">
+        <field name="name">Staring Sec</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.l10n.ec.staring.sec</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Sequece.
+            </p>
+        </field>
+    </record>
+    <menuitem name="Staring Sec" id="menu_receivables_staring_sec"
+              parent="account.account_account_menu"
+              action="in_staring_sec_act_window"/>
+</odoo>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="report_ride" inherit_id="l10n_ec_nmit.report_ride">
+        <!--Heredar por clase, no se le pone @ sino hasclass, y el nombre de la clase va entre parencesis  <xpath expr="//div[hasclass('mt16')]" position="replace">      <xpath expr="//field[@name='category_id']" position="after"> -->
+        <xpath expr="//div[@id='cabecera']" position="replace">
+
+           
+            <div id="cabecera2" class="row mb-4">
+
+                <div class="col-4" style="border: 1px solid;">
+                    <div class="row pb-1" style="line-height:12px;">
+                        <div class="col-12">
+                            <div class="row p-1 ml-5 text-center">
+                                <img t-attf-src="/logo.png?company={{ o.company_id.id }}" style="padding: 0px; margin: 0px; height: 50px; width: auto;" t-att-alt="o.company_id.name"/>
+                            </div>
+                            <div class="row pb-2">
+                                <div class="col-12 text-center"><span style="font-weight: bold; font-size: 9px;" t-esc="o.company_id.display_name or ''"/> </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col-12">                                                                   
+                                    <span style="font-size: 16px;">R.U.C:</span>                                
+                                    <span style="font-size: 16px;" t-esc="o.company_id.partner_id.vat or ''"/>                                
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="text-left">
+                                        <span style="font-size: 10px;">Contribuyente Especial Resol.:</span>
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="text-left">
+                                        <span style="font-size: 10px;" t-esc="o.company_id.agent_number or ''"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <span style="font-size: 10px;">OBLIGADO A LLEVAR CONTABILIDAD:</span>
+                                </div>
+                                <div class="col-3">
+                                    <span style="font-size: 10px;" t-esc="o.company_id.l10n_ec_accounting or 'NO'"/>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>                                                                      
+
+                    <div class="row p-1" style="line-height:10px; border-top: 1px solid;">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="text-left">
+                                        <span style="font-size: 10px;">AMBIENTE:</span>
+                                    </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-left">
+                                        <span style="font-size: 10px;" t-esc="o.l10n_ec_auth_env or 'N/A'"/>
+                                    </p>
+                                </div>                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="text-left"><span style="font-size: 10px;">EMISIÓN:</span></p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-left"><span style="font-size: 10px;" t-esc="o.l10n_ec_emission_code or 'N/A'"/></p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-8 g-0" style="border: 1px solid;">
+                    <div class="row" style="border-bottom: 1px solid;">
+                        <div class="col-6" style="border-right: 1px solid;">
+                            <div class="row ml-2">
+                                <div><span style="font-size: 24px;">FACTURA</span></div>
+                            </div>
+                            <div class="row ml-2">
+                                <span class="text-danger">No.</span>
+                                <span class="text-danger" t-esc="o.l10n_latam_document_number or ''"/>      
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="row ml-2">
+                                <div class="text-center" style="font-size: 20px;">AUTORIZACIÓN SRI</div>
+                                  
+                            </div>
+                            <div class="row ml-2">                                                        
+                                <div style="font-size: 8px;" name="auth_number" t-esc="o.l10n_ec_auth_number or 'N/A'" />
+                            </div>
+                            <div class="row ml-2">
+                                <div style="font-size: 10px;">FECHA Y HORA DE AUTORIZACIÓN</div>
+                            </div>
+                            <div class="row ml-2">                     
+                                <div style="font-size: 9px;" name="datetime" t-esc="o.l10n_ec_auth_date or 'N/A'"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="row ml-2">
+                                <span style="font-size: 11px;">Dir. Matriz: </span>
+                                <span style="font-size: 11px;" t-esc="o.company_id.partner_id._l10n_ec_direction() or ''"/>
+                            </div>
+                            <div class="row ml-2">
+                                <span style="font-size: 11px;">Dir. Sucursal: </span>
+                                <span style="font-size: 11px;" t-esc="o.journal_id.l10n_ec_emission_address_id._l10n_ec_direction() or ''"/>
+                            </div>
+
+                        </div>
+                        <div class="col-7" style="border-left: 1px solid;">
+                            <div class="row ml-2">
+                                <div><span style="font-size: 11px;">CLAVE DE ACCESO:</span></div>                                
+                                <!-- <div><span style="font-size: 10px;">CLAVE DE ACCESO:</span></div>
+                                <img width="100%" t-att-src="'/report/barcode/Code128/%s' % o.l10n_ec_access_key"/>
+                                <div name="auth_access_key" t-esc="o.l10n_ec_access_key" style="font-size: 8px; text-align: center; width:100%"/>                                 -->
+                            </div>
+                            <div class="row ml-2">
+                                <img width="100%" t-att-src="'/report/barcode/Code128/%s' % o.l10n_ec_access_key"/>
+                            </div>
+                            <div class="row ml-2">
+                                <div name="auth_access_key" t-esc="o.l10n_ec_access_key" style="font-size: 8px; text-align: center; width:100%"/>  
+                            </div>
+
+                        </div>                   
+                    </div>
+                </div>                        
+            </div>
+
+
+
+        </xpath>    
+    </template>
+
+</odoo>

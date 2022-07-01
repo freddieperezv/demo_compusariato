@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--  Maintenance teams -->
+        <record id="equipment_maquinary" model="maintenance.team">
+            <field name="name">Mantenimiento Maquinaria</field>
+        </record>
+        <record id="equipment_team_subcontractor" model="maintenance.team">
+            <field name="name">Subcontratado</field>
+        </record>
+
+        <record id="equipment_team_server" model="maintenance.team">
+            <field name="name">Mantenimiento Computadoras y Servidores</field>
+        </record>
+
+        <record id="equipment_team_printer" model="maintenance.team">
+            <field name="name">Mantenimiento de Impresoras</field>
+        </record>
+            
+
+        <!-- Equipment categories -->
+        <record id="equipment_computer" model="maintenance.equipment.category">
+            <field name="name">Computadoras</field>
+        </record>
+        <record id="equipment_software" model="maintenance.equipment.category">
+            <field name="name">Software</field>
+        </record>
+        <record id="equipment_printer" model="maintenance.equipment.category">
+            <field name="name">Impresoras</field>
+        </record>
+        <record id="equipment_monitor" model="maintenance.equipment.category">
+            <field name="name">Monitores</field>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0907440267001"/>
+            <field name="color">3</field>
+        </record>
+        <record id="equipment_phone" model="maintenance.equipment.category">
+            <field name="name">Teléfonos</field>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0891765568001"/>
+        </record>
+
+        <record id="equipment_server" model="maintenance.equipment.category">
+            <field name="name">Servidores</field>
+        </record>
+
+        <record id="equipment_photography" model="maintenance.equipment.category">
+            <field name="name">Equipos Fotográficos</field>
+        </record>
+
+        <!-- Equipments -->
+        <record id="equipment_monitor1" model="maintenance.equipment">
+            <field name="name">Samsung Monitor 15"</field>
+            <field name="category_id" ref="equipment_monitor"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0907440267001"/>
+            <field name="assign_date" eval="time.strftime('%Y-%m-10')"/>
+            <field name="serial_no">MT/122/11112222</field>
+            <field name="model">NP300E5X</field>
+        </record>
+        <record id="equipment_monitor4" model="maintenance.equipment">
+            <field name="name">Samsung Monitor 15"</field>
+            <field name="category_id" ref="equipment_monitor"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0907440267001"/>
+            <field name="assign_date" eval="time.strftime('%Y-01-01')"/>
+            <field name="serial_no">MT/125/22778837</field>
+            <field name="model">NP355E5X</field>
+        </record>
+        <record id="equipment_monitor6" model="maintenance.equipment">
+            <field name="name">Samsung Monitor 15"</field>
+            <field name="category_id" ref="equipment_monitor"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0907440267001"/>
+            <field name="assign_date" eval="time.strftime('%Y-02-01')"/>
+            <field name="serial_no">MT/127/18291018</field>
+            <field name="model">NP355E5X</field>
+            <field name="color">3</field>
+        </record>
+        <record id="equipment_computer3" model="maintenance.equipment">
+            <field name="name">Acer Laptop</field>
+            <field name="category_id" ref="equipment_computer"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0916514060001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="assign_date" eval="time.strftime('%Y-03-08')"/>
+            <field name="serial_no">LP/203/19281928</field>
+            <field name="model">NE56R</field>
+        </record>
+        <record id="equipment_computer5" model="maintenance.equipment">
+            <field name="name">Acer Laptop</field>
+            <field name="category_id" ref="equipment_computer"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0891765568001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="assign_date" eval="time.strftime('%Y-04-08')"/>
+            <field name="serial_no">LP/205/12928291</field>
+            <field name="model">V5131</field>
+        </record>
+        <record id="equipment_computer9" model="maintenance.equipment">
+            <field name="name">HP Laptop</field>
+            <field name="category_id" ref="equipment_computer"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="assign_date" eval="time.strftime('%Y-%m-11')"/>
+            <field name="serial_no">LP/303/28292090</field>
+            <field name="model">17-j059nr</field>
+        </record>
+        <record id="equipment_computer11" model="maintenance.equipment">
+            <field name="name">HP Laptop</field>
+            <field name="category_id" ref="equipment_computer"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="assign_date" eval="time.strftime('%Y-05-01')"/>
+            <field name="serial_no">LP/305/17281718</field>
+        </record>
+        <record id="equipment_printer1" model="maintenance.equipment">
+            <field name="name">HP Inkjet printer</field>
+            <field name="category_id" ref="equipment_printer"/>
+            <field name="technician_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="serial_no">PR/011/2928191889</field>
+        </record>
+
+        <!--Maintenance Request-->
+
+        <record id="m_request_3" model="maintenance.request">
+            <field name="name">Problemas con la resolución del panel</field>
+            <field name="user_id" ref="demo_compusariato_nmit.USER_IMPORT_0907440267001"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="equipment_id" ref="equipment_monitor6"/>
+            <field name="color">7</field>
+            <field name="stage_id" ref="maintenance.stage_3"/>
+            <field name="maintenance_team_id" ref="equipment_team_server"/>
+        </record>
+        <record id="m_request_4" model="maintenance.request">
+            <field name="name">Algunas teclas no funcionan</field>
+            <field name="user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0916514060001"/>
+            <field name="equipment_id" ref="equipment_computer3"/>
+            <field name="stage_id" ref="maintenance.stage_0"/>
+            <field name="maintenance_team_id" ref="equipment_team_server"/>
+        </record>
+        <record id="m_request_6" model="maintenance.request">
+            <field name="name">La bateria se acaba muy rápido</field>
+            <field name="user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0891765568001"/>
+            <field name="equipment_id" ref="equipment_computer5"/>
+            <field name="stage_id" ref="maintenance.stage_4"/>
+            <field name="maintenance_team_id" ref="equipment_team_server"/>
+        </record>
+        <record id="m_request_7" model="maintenance.request">
+            <field name="name">El touchpad no funcina</field>
+            <field name="user_id" ref="demo_compusariato_nmit.USER_IMPORT_0701102048001"/>
+            <field name="owner_user_id" ref="demo_compusariato_nmit.USER_IMPORT_0941984643001"/>
+            <field name="equipment_id" ref="equipment_computer11"/>
+            <field name="stage_id" ref="maintenance.stage_1"/>
+            <field name="maintenance_team_id" ref="equipment_team_server"/>
+        </record> 
+    </data>
+</odoo>

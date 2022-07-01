@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <record id="paperformat_us" model="report.paperformat">
+        <field name="name">A4</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">7</field>
+        <field name="margin_bottom">7</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">10</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="report_eremission_guide" model="ir.actions.report">
+        <field name="name">Guía de Remisión</field>
+        <field name="paperformat_id" ref="l10n_ec_remission.paperformat_us"/>
+        <field name="model">account.remission.guide</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">l10n_ec_remission.report_eremission_guide_template</field>
+        <field name="report_file">l10n_ec_remission.report_eremission_guide_template</field>
+        <field name="binding_model_id" ref="l10n_ec_remission.model_account_remission_guide"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_remission_guide">
+        <t t-call="web.basic_layout">
+            <t t-set="o" t-value="o.with_context(lang=lang)" />            
+            <t t-foreach="o.line_ids" t-as="ob">
+                <p style="page-break-before:always;">
+                    <div class="page" style="font-size: 12px">
+                       
+
+                        <div id="cabecera" class="row mb-4" style="min-height:7cm !important;">
+                            <div class="col-6">
+
+                                <div class="row" style="min-height:4cm !important;">
+                                    <div class="col-12 text-center">
+                                        <img t-attf-src="/logo.png?company={{ o.company_id.id }}" style="padding: 0px; margin: 0px; height: 120px; width: auto;" t-att-alt="o.company_id.name"/>
+                                    </div>
+                                </div>
+
+                                <div class="row border border-dark rounded-lg p-2 pt-4" style="margin-right: 0.05px; font-size: small; min-height:6cm !important;">
+                        
+                                    <div class="col-12 text-center">
+                                        <p class="text-left"><span style="font-weight: bold; font-size: medium;" t-esc="o.company_id.display_name or ''"/></p>
+                                                                
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <p class="text-left">
+                                                    <strong>Dir. Matriz</strong>
+                                                </p>
+                                            </div> 
+                                            <div class="col-8">
+                                                <p class="text-left">
+                                                    <span t-esc="o.company_id.partner_id._l10n_ec_direction() or ''"/>
+                                                </p>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <p class="text-left mb-1">
+                                                    <strong class="mr-2">Dir. Sucursal:</strong>
+                                                </p>                                        
+                                            </div> 
+
+                                            <div class="col-8">
+                                                <p class="text-left">
+                                                    <!-- <span t-esc="o.journal_id.l10n_ec_emission_address_id._l10n_ec_direction() or ''"/> -->
+                                                    <span t-esc="o.company_id.partner_id._l10n_ec_direction() or ''"/>
+                                                </p>                                        
+                                            </div> 
+                                        </div> 
+
+
+
+
+                                        <div t-if="o.company_id.micro_business==False" class="row">
+                                            <div class="col-7">
+                                                <p class="text-left">
+                                                    <strong class="mr-2">Contribuyente Especial No.:</strong>
+                                                </p>                                        
+                                            </div> 
+
+                                            <div class="col-5">
+                                                <p class="text-left">
+                                                    <span t-esc="o.company_id.company_registry or ''"/>
+                                                </p>                                        
+                                            </div> 
+                                        </div> 
+                                        <div t-if="o.company_id.micro_business==True" class="row">
+                                            <div class="col-7">
+                                                <p class="text-left">
+                                                    <strong class="mr-2">Contribuyente Régimen RIMPE</strong>
+                                                </p>                                        
+                                            </div> 
+                                            <div class="col-5">                             
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <p class="text-left">
+                                                    <strong class="mr-2">Obligado a llevar contabilidad:</strong>
+                                                </p>                                        
+                                            </div> 
+
+                                            <div class="col-5">
+                                                <p class="text-left">
+                                                    <span t-esc="o.company_id.l10n_ec_accounting or 'NO'"/>
+                                                </p>                                        
+                                            </div>  
+                                        </div>  
+
+                                        <!-- <t t-if="o.company_id.agent_number">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <p class="text-left">
+                                                        <strong class="mr-2 text-nowrap">Agente de Retención Resolunción No.:</strong>
+                                                    </p>                                        
+                                                </div> 
+
+                                                <div class="col-5">
+                                                    <p class="text-left text-nowrap">
+                                                        <span t-esc="o.company_id.agent_number or 'NO'"/>
+                                                    </p>                                        
+                                                </div>  
+                                            </div>
+                                        </t>                                             -->
+                                    </div>                                             
+                                </div>
+                            </div>
+
+                            <div class="col-6 border border-dark rounded-lg">
+                                <div name="company_ruc">
+                                    <strong class="mr-2" style="font-size: 25px;">R.U.C.:</strong>
+                                    <span style="font-size: 25px;" t-esc="o.company_id.partner_id.vat or ''"/>
+                                </div>
+                                <div style="font-size: 25px; width:100%">
+                                    <strong>GUÍA DE REMISIÓN</strong>
+                                    
+                                </div>
+                                <p>
+                                    <strong class="text-danger mr-2" style="font-size: 17px;">No.</strong>
+                                    <span class="text-danger" style="font-size: 17px;" t-esc="o.l10n_latam_document_number or ''"/>
+                                </p>    
+                                <div> <strong style="font-size: small;">NÚMERO DE AUTORIZACIÓN</strong></div>
+                                <div class="pb-1 mb-1" style="font-size: small;" name="auth_number" t-esc="o.l10n_ec_auth_number or 'N/A'" />
+                                
+                                <div><strong style="font-size: small;">FECHA Y HORA DE AUTORIZACIÓN:</strong></div>
+                                <div class="pb-1 mb-1" style="font-size: small;" name="datetime" t-esc="o.l10n_ec_auth_date or 'N/A'"/>
+                                
+                                
+                                <div>
+                                    <strong style="font-size: small;">AMBIENTE:</strong>
+                                    <span style="font-size: small;" t-esc="o.l10n_ec_auth_env or 'N/A'"/></div>
+                                <div class="pb-1 mb-1">
+                                    <strong style="font-size: small;">EMISIÓN:</strong>
+                                    <span style="font-size: small;" t-esc="o.l10n_ec_emission_code or 'N/A'"/>
+                                </div>
+                                
+                                <div><strong style="font-size: small;">CLAVE DE ACCESO:</strong></div>
+                                <div>
+                                    <img style="text-align:center;width:100%" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1' % ('Code128', o.l10n_ec_access_key, 450, 60)"/>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <!-- <div style="border: 1px solid; padding-left: 20px; margin-top: 10px; margin-bottom: 10px"> -->
+                        <div class="row border border-dark rounded-lg mb-4">
+                            <div class="col-12 ml-2">
+                                <div style="margin-bottom: 10px;" class="row">
+                                    <div class="col-10" style="padding-left: 0px;">
+                                        <span><strong>IDENTIFICACIÓN DEL TRANSPORTISTA</strong></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>FECHA DE EMISIÓN:</strong></span>
+                                    </div>
+                                    <div class="col-5" style="padding-left: 0px;">
+                                        <span t-field="o.date"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>NOMBRE/RAZÓN SOCIAL:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-esc="o.partner_id.name.upper()"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>IDENTIFICACIÓN:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-esc="o.partner_id.vat"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>PUNTO DE PARTIDA:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-esc="o.address_from"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>PLACA:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-esc="o.license_plate.upper()"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>INICIO TRASLADO:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="o.date_start"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>FIN TRASLADO:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="o.date_end"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style="border: 1px solid; padding-left: 20px; padding-right: 20px; margin-bottom: 10px"> -->
+                        <div class="row border border-dark rounded-lg mb-4">
+                            <div class="col-12 ml-2">
+                                <div class="row">
+                                    <div class="col-10" style="padding-left: 0px;">
+                                        <span><strong>DESTINATARIO</strong></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>COMPRABANTE DE VENTA:</strong></span>
+                                    </div>
+                                    <t t-if="ob.move_id.move_type">
+                                        <div class="col-3" style="padding-left: 0px;">
+                                            <span>FACTURA</span>
+                                        </div>
+                                    </t>
+                                    <t t-else="ob.move_id.move_type">
+                                        <div class="col-3" style="padding-left: 0px; ">
+                                            <span>N/A</span>
+                                        </div>
+                                    </t>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>N. COMPROBANTE:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-esc="ob.move_id.l10n_latam_document_number or 'N/A'"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>N. AUTORIZACIÓN:</strong></span>
+                                    </div>
+                                    <div class="col-9" style="padding-left: 0px;">
+                                        <span t-esc="ob.move_id.l10n_ec_auth_number or ob.move_id.l10n_ec_auth_number or 'N/A'"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>NOMBRE/RAZON SOCIAL:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.partner_id.name"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>IDENTIFICACIÓN:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.partner_id.vat"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>TELÉFONO:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.partner_id.phone"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>MOTIVO:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.reason_id.name"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>PUNTO DE LLEGADA:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.partner_id.street"/>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span><strong>RUTA:</strong></span>
+                                    </div>
+                                    <div class="col-3" style="padding-left: 0px;">
+                                        <span t-field="ob.route_id.name"/>
+                                    </div>
+                                </div>
+                                <br/>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <th style="border: 1px solid">CANTIDAD</th>
+                                        <th class="col-2" style="border: 1px solid">DESCRIPCIÓN</th>
+                                        <th style="border: 1px solid">CÓDIGO PRINCIPAL</th>
+                                        <th style="border: 1px solid">CÓDIGO AUX.</th>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr t-foreach="ob.picking_id.move_lines" t-as="obj"> -->
+                                        <tr t-foreach="ob.stock_move_lines" t-as="obj">
+                                            <td style="border:1px solid">
+                                                <span t-esc="obj.qty_done"/>
+                                                <span t-field="obj.product_uom_id.name"/>
+                                            </td>
+                                            <td style="padding-left: 0px; border:1px solid">
+                                                <span t-field="obj.product_id.name"/>
+                                            </td>
+                                            <td style="border: 1px solid;">
+                                                <span t-field="obj.product_id.default_code"/>
+                                            </td>
+                                            <td style="padding-left: 0px; border:1px solid">                                            
+                                                <!-- <img style="text-align: left;" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1' % ('Code128',obj.product_id.barcode, 225, 30)"/> -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br/>
+                            </div>    
+                        </div>
+                        <div style="float: left;width: 50%;padding: 5px;">
+                            <table style="border: 1px solid black; border-collapse: collapse; width:100%;">
+                                <tr>
+                                    <td colspan="2" style="padding-left: 5px;"><strong>Información Adicional</strong></td>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left: 5px;"><strong>Dirección: </strong></td><td><span t-esc="o.partner_id.street or '**'"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left: 5px;"><strong>Teléfono: </strong></td><td><span t-esc="o.partner_id.phone or '**'"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left: 5px;"><strong>Email: </strong></td><td><span t-esc="o.partner_id.email"/></td>
+                                </tr>
+                                <t t-if="o.company_id.micro_business==True">
+                                    <tr>
+                                        <td colspan="2" style="padding-left: 5px;text-align:center"><strong>Contribuyente Regimen RIMPE</strong></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                    </div>
+                </p>
+            </t>
+
+
+
+
+
+
+
+
+        </t>
+    </template>
+
+
+
+    <template id="report_eremission_guide_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="l10n_ec_remission.report_remission_guide" t-lang="o.partner_id.lang"/>
+                <!-- <t t-call="l10n_ec_einvoice.einvoice_layout_elec"> -->
+
+                <!-- </t> -->
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

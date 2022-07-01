@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="01" model="l10n.ec.type.foreign.tax.regime">
+        <field name="name">Régimen general</field>
+        <field name="code">01</field>
+    </record>
+    <record id="02" model="l10n.ec.type.foreign.tax.regime">
+        <field name="name">Paraíso fiscal</field>
+        <field name="code">02</field>
+    </record>
+    <record id="03" model="l10n.ec.type.foreign.tax.regime">
+        <field name="name">Régimen fiscal preferente o jurisdicción de menor imposición</field>
+        <field name="code">03</field>
+    </record>
+</odoo>

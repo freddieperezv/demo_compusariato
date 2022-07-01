@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="16" model="l10n.ec.country.payment.regime"><field name="name">AMERICAN SAMOA</field><field name="code">16</field></record>
+<record id="74" model="l10n.ec.country.payment.regime"><field name="name">BOUVET ISLAND</field><field name="code">74</field></record>
+<record id="101" model="l10n.ec.country.payment.regime"><field name="name">ARGENTINA</field><field name="code">101</field></record>
+<record id="102" model="l10n.ec.country.payment.regime"><field name="name">BOLIVIA</field><field name="code">102</field></record>
+<record id="103" model="l10n.ec.country.payment.regime"><field name="name">BRASIL</field><field name="code">103</field></record>
+<record id="104" model="l10n.ec.country.payment.regime"><field name="name">CANADA</field><field name="code">104</field></record>
+<record id="105" model="l10n.ec.country.payment.regime"><field name="name">COLOMBIA</field><field name="code">105</field></record>
+<record id="106" model="l10n.ec.country.payment.regime"><field name="name">COSTA RICA</field><field name="code">106</field></record>
+<record id="107" model="l10n.ec.country.payment.regime"><field name="name">CUBA</field><field name="code">107</field></record>
+<record id="108" model="l10n.ec.country.payment.regime"><field name="name">CHILE</field><field name="code">108</field></record>
+<record id="109" model="l10n.ec.country.payment.regime"><field name="name">ANGUILA</field><field name="code">109</field></record>
+<record id="110" model="l10n.ec.country.payment.regime"><field name="name">ESTADOS UNIDOS</field><field name="code">110</field></record>
+<record id="111" model="l10n.ec.country.payment.regime"><field name="name">GUATEMALA</field><field name="code">111</field></record>
+<record id="112" model="l10n.ec.country.payment.regime"><field name="name">HAITI</field><field name="code">112</field></record>
+<record id="113" model="l10n.ec.country.payment.regime"><field name="name">HONDURAS</field><field name="code">113</field></record>
+<record id="114" model="l10n.ec.country.payment.regime"><field name="name">JAMAICA</field><field name="code">114</field></record>
+<record id="115" model="l10n.ec.country.payment.regime"><field name="name">MALVINAS  ISLAS</field><field name="code">115</field></record>
+<record id="116" model="l10n.ec.country.payment.regime"><field name="name">MEXICO</field><field name="code">116</field></record>
+<record id="117" model="l10n.ec.country.payment.regime"><field name="name">NICARAGUA</field><field name="code">117</field></record>
+<record id="118" model="l10n.ec.country.payment.regime"><field name="name">PANAMA</field><field name="code">118</field></record>
+<record id="119" model="l10n.ec.country.payment.regime"><field name="name">PARAGUAY</field><field name="code">119</field></record>
+<record id="120" model="l10n.ec.country.payment.regime"><field name="name">PERU</field><field name="code">120</field></record>
+<record id="121" model="l10n.ec.country.payment.regime"><field name="name">PUERTO RICO</field><field name="code">121</field></record>
+<record id="122" model="l10n.ec.country.payment.regime"><field name="name">REPUBLICA DOMINICANA</field><field name="code">122</field></record>
+<record id="123" model="l10n.ec.country.payment.regime"><field name="name">EL SALVADOR</field><field name="code">123</field></record>
+<record id="124" model="l10n.ec.country.payment.regime"><field name="name">TRINIDAD Y TOBAGO</field><field name="code">124</field></record>
+<record id="125" model="l10n.ec.country.payment.regime"><field name="name">URUGUAY</field><field name="code">125</field></record>
+<record id="126" model="l10n.ec.country.payment.regime"><field name="name">VENEZUELA</field><field name="code">126</field></record>
+<record id="127" model="l10n.ec.country.payment.regime"><field name="name">CURAZAO</field><field name="code">127</field></record>
+<record id="129" model="l10n.ec.country.payment.regime"><field name="name">BAHAMAS</field><field name="code">129</field></record>
+<record id="130" model="l10n.ec.country.payment.regime"><field name="name">BARBADOS</field><field name="code">130</field></record>
+<record id="131" model="l10n.ec.country.payment.regime"><field name="name">GRANADA</field><field name="code">131</field></record>
+<record id="132" model="l10n.ec.country.payment.regime"><field name="name">GUYANA</field><field name="code">132</field></record>
+<record id="133" model="l10n.ec.country.payment.regime"><field name="name">SURINAM</field><field name="code">133</field></record>
+<record id="134" model="l10n.ec.country.payment.regime"><field name="name">ANTIGUA Y BARBUDA</field><field name="code">134</field></record>
+<record id="135" model="l10n.ec.country.payment.regime"><field name="name">BELICE</field><field name="code">135</field></record>
+<record id="136" model="l10n.ec.country.payment.regime"><field name="name">DOMINICA</field><field name="code">136</field></record>
+<record id="137" model="l10n.ec.country.payment.regime"><field name="name">SAN CRISTOBAL Y NEVIS</field><field name="code">137</field></record>
+<record id="138" model="l10n.ec.country.payment.regime"><field name="name">SANTA LUCIA</field><field name="code">138</field></record>
+<record id="139" model="l10n.ec.country.payment.regime"><field name="name">SAN VICENTE Y LAS GRANAD.</field><field name="code">139</field></record>
+<record id="141" model="l10n.ec.country.payment.regime"><field name="name">ARUBA</field><field name="code">141</field></record>
+<record id="142" model="l10n.ec.country.payment.regime"><field name="name">BERMUDA</field><field name="code">142</field></record>
+<record id="143" model="l10n.ec.country.payment.regime"><field name="name">GUADALUPE</field><field name="code">143</field></record>
+<record id="144" model="l10n.ec.country.payment.regime"><field name="name">GUYANA FRANCESA</field><field name="code">144</field></record>
+<record id="145" model="l10n.ec.country.payment.regime"><field name="name">ISLAS CAIMAN</field><field name="code">145</field></record>
+<record id="146" model="l10n.ec.country.payment.regime"><field name="name">ISLAS VIRGENES (BRITANICAS)</field><field name="code">146</field></record>
+<record id="147" model="l10n.ec.country.payment.regime"><field name="name">JOHNSTON ISLA</field><field name="code">147</field></record>
+<record id="148" model="l10n.ec.country.payment.regime"><field name="name">MARTINICA</field><field name="code">148</field></record>
+<record id="149" model="l10n.ec.country.payment.regime"><field name="name">MONTSERRAT ISLA</field><field name="code">149</field></record>
+<record id="151" model="l10n.ec.country.payment.regime"><field name="name">TURCAS  Y CAICOS ISLAS</field><field name="code">151</field></record>
+<record id="152" model="l10n.ec.country.payment.regime"><field name="name">VIRGENES,ISLAS(NORT.AMER.)</field><field name="code">152</field></record>
+<record id="201" model="l10n.ec.country.payment.regime"><field name="name">ALBANIA</field><field name="code">201</field></record>
+<record id="202" model="l10n.ec.country.payment.regime"><field name="name">ALEMANIA</field><field name="code">202</field></record>
+<record id="203" model="l10n.ec.country.payment.regime"><field name="name">AUSTRIA</field><field name="code">203</field></record>
+<record id="204" model="l10n.ec.country.payment.regime"><field name="name">BELGICA</field><field name="code">204</field></record>
+<record id="205" model="l10n.ec.country.payment.regime"><field name="name">BULGARIA</field><field name="code">205</field></record>
+<record id="207" model="l10n.ec.country.payment.regime"><field name="name">ALBORAN Y PEREJIL</field><field name="code">207</field></record>
+<record id="208" model="l10n.ec.country.payment.regime"><field name="name">DINAMARCA</field><field name="code">208</field></record>
+<record id="209" model="l10n.ec.country.payment.regime"><field name="name">ESPAÑA</field><field name="code">209</field></record>
+<record id="211" model="l10n.ec.country.payment.regime"><field name="name">FRANCIA</field><field name="code">211</field></record>
+<record id="212" model="l10n.ec.country.payment.regime"><field name="name">FINLANDIA</field><field name="code">212</field></record>
+<record id="213" model="l10n.ec.country.payment.regime"><field name="name">REINO UNIDO</field><field name="code">213</field></record>
+<record id="214" model="l10n.ec.country.payment.regime"><field name="name">GRECIA</field><field name="code">214</field></record>
+<record id="215" model="l10n.ec.country.payment.regime"><field name="name">PAISES BAJOS (HOLANDA)</field><field name="code">215</field></record>
+<record id="216" model="l10n.ec.country.payment.regime"><field name="name">HUNGRIA</field><field name="code">216</field></record>
+<record id="217" model="l10n.ec.country.payment.regime"><field name="name">IRLANDA</field><field name="code">217</field></record>
+<record id="218" model="l10n.ec.country.payment.regime"><field name="name">ISLANDIA</field><field name="code">218</field></record>
+<record id="219" model="l10n.ec.country.payment.regime"><field name="name">ITALIA</field><field name="code">219</field></record>
+<record id="220" model="l10n.ec.country.payment.regime"><field name="name">LUXEMBURGO</field><field name="code">220</field></record>
+<record id="221" model="l10n.ec.country.payment.regime"><field name="name">MALTA</field><field name="code">221</field></record>
+<record id="222" model="l10n.ec.country.payment.regime"><field name="name">NORUEGA</field><field name="code">222</field></record>
+<record id="223" model="l10n.ec.country.payment.regime"><field name="name">POLONIA</field><field name="code">223</field></record>
+<record id="224" model="l10n.ec.country.payment.regime"><field name="name">PORTUGAL</field><field name="code">224</field></record>
+<record id="225" model="l10n.ec.country.payment.regime"><field name="name">RUMANIA</field><field name="code">225</field></record>
+<record id="226" model="l10n.ec.country.payment.regime"><field name="name">SUECIA</field><field name="code">226</field></record>
+<record id="227" model="l10n.ec.country.payment.regime"><field name="name">SUIZA</field><field name="code">227</field></record>
+<record id="228" model="l10n.ec.country.payment.regime"><field name="name">CANARIAS  ISLAS</field><field name="code">228</field></record>
+<record id="229" model="l10n.ec.country.payment.regime"><field name="name">UCRANIA</field><field name="code">229</field></record>
+<record id="230" model="l10n.ec.country.payment.regime"><field name="name">RUSIA</field><field name="code">230</field></record>
+<record id="231" model="l10n.ec.country.payment.regime"><field name="name">YUGOSLAVIA</field><field name="code">231</field></record>
+<record id="233" model="l10n.ec.country.payment.regime"><field name="name">ANDORRA</field><field name="code">233</field></record>
+<record id="234" model="l10n.ec.country.payment.regime"><field name="name">LIECHTENSTEIN</field><field name="code">234</field></record>
+<record id="235" model="l10n.ec.country.payment.regime"><field name="name">MONACO</field><field name="code">235</field></record>
+<record id="237" model="l10n.ec.country.payment.regime"><field name="name">SAN MARINO</field><field name="code">237</field></record>
+<record id="238" model="l10n.ec.country.payment.regime"><field name="name">VATICANO (SANTA SEDE)</field><field name="code">238</field></record>
+<record id="239" model="l10n.ec.country.payment.regime"><field name="name">GIBRALTAR</field><field name="code">239</field></record>
+<record id="241" model="l10n.ec.country.payment.regime"><field name="name">BELARUS</field><field name="code">241</field></record>
+<record id="242" model="l10n.ec.country.payment.regime"><field name="name">BOSNIA Y HERZEGOVINA</field><field name="code">242</field></record>
+<record id="243" model="l10n.ec.country.payment.regime"><field name="name">CROACIA</field><field name="code">243</field></record>
+<record id="244" model="l10n.ec.country.payment.regime"><field name="name">ESLOVENIA</field><field name="code">244</field></record>
+<record id="245" model="l10n.ec.country.payment.regime"><field name="name">ESTONIA</field><field name="code">245</field></record>
+<record id="246" model="l10n.ec.country.payment.regime"><field name="name">GEORGIA</field><field name="code">246</field></record>
+<record id="247" model="l10n.ec.country.payment.regime"><field name="name">GROENLANDIA</field><field name="code">247</field></record>
+<record id="248" model="l10n.ec.country.payment.regime"><field name="name">LETONIA</field><field name="code">248</field></record>
+<record id="249" model="l10n.ec.country.payment.regime"><field name="name">LITUANIA</field><field name="code">249</field></record>
+<record id="250" model="l10n.ec.country.payment.regime"><field name="name">MOLDOVA</field><field name="code">250</field></record>
+<record id="251" model="l10n.ec.country.payment.regime"><field name="name">MACEDONIA</field><field name="code">251</field></record>
+<record id="252" model="l10n.ec.country.payment.regime"><field name="name">ESLOVAQUIA</field><field name="code">252</field></record>
+<record id="253" model="l10n.ec.country.payment.regime"><field name="name">ISLAS FAROE</field><field name="code">253</field></record>
+<record id="260" model="l10n.ec.country.payment.regime"><field name="name">FRENCH SOUTHERN TERRITORIES</field><field name="code">260</field></record>
+<record id="301" model="l10n.ec.country.payment.regime"><field name="name">AFGANISTAN</field><field name="code">301</field></record>
+<record id="302" model="l10n.ec.country.payment.regime"><field name="name">ARABIA SAUDITA</field><field name="code">302</field></record>
+<record id="303" model="l10n.ec.country.payment.regime"><field name="name">MYANMAR (BURMA)</field><field name="code">303</field></record>
+<record id="304" model="l10n.ec.country.payment.regime"><field name="name">CAMBOYA</field><field name="code">304</field></record>
+<record id="306" model="l10n.ec.country.payment.regime"><field name="name">COREA NORTE</field><field name="code">306</field></record>
+<record id="307" model="l10n.ec.country.payment.regime"><field name="name">TAIWAN (CHINA)</field><field name="code">307</field></record>
+<record id="308" model="l10n.ec.country.payment.regime"><field name="name">FILIPINAS</field><field name="code">308</field></record>
+<record id="309" model="l10n.ec.country.payment.regime"><field name="name">INDIA</field><field name="code">309</field></record>
+<record id="310" model="l10n.ec.country.payment.regime"><field name="name">INDONESIA</field><field name="code">310</field></record>
+<record id="311" model="l10n.ec.country.payment.regime"><field name="name">IRAK</field><field name="code">311</field></record>
+<record id="312" model="l10n.ec.country.payment.regime"><field name="name">IRAN (REPUBLICA ISLAMICA)</field><field name="code">312</field></record>
+<record id="313" model="l10n.ec.country.payment.regime"><field name="name">ISRAEL</field><field name="code">313</field></record>
+<record id="314" model="l10n.ec.country.payment.regime"><field name="name">JAPON</field><field name="code">314</field></record>
+<record id="315" model="l10n.ec.country.payment.regime"><field name="name">JORDANIA</field><field name="code">315</field></record>
+<record id="316" model="l10n.ec.country.payment.regime"><field name="name">KUWAIT</field><field name="code">316</field></record>
+<record id="317" model="l10n.ec.country.payment.regime"><field name="name">LAOS, REP. POP. DEMOC.</field><field name="code">317</field></record>
+<record id="318" model="l10n.ec.country.payment.regime"><field name="name">LIBANO</field><field name="code">318</field></record>
+<record id="319" model="l10n.ec.country.payment.regime"><field name="name">MALASIA</field><field name="code">319</field></record>
+<record id="321" model="l10n.ec.country.payment.regime"><field name="name">MONGOLIA (MANCHURIA)</field><field name="code">321</field></record>
+<record id="322" model="l10n.ec.country.payment.regime"><field name="name">PAKISTAN</field><field name="code">322</field></record>
+<record id="323" model="l10n.ec.country.payment.regime"><field name="name">SIRIA</field><field name="code">323</field></record>
+<record id="325" model="l10n.ec.country.payment.regime"><field name="name">TAILANDIA</field><field name="code">325</field></record>
+<record id="327" model="l10n.ec.country.payment.regime"><field name="name">BAHREIN</field><field name="code">327</field></record>
+<record id="328" model="l10n.ec.country.payment.regime"><field name="name">BANGLADESH</field><field name="code">328</field></record>
+<record id="329" model="l10n.ec.country.payment.regime"><field name="name">BUTAN</field><field name="code">329</field></record>
+<record id="330" model="l10n.ec.country.payment.regime"><field name="name">COREA DEL SUR</field><field name="code">330</field></record>
+<record id="331" model="l10n.ec.country.payment.regime"><field name="name">CHINA POPULAR</field><field name="code">331</field></record>
+<record id="332" model="l10n.ec.country.payment.regime"><field name="name">CHIPRE</field><field name="code">332</field></record>
+<record id="333" model="l10n.ec.country.payment.regime"><field name="name">EMIRATOS ARABES UNIDOS</field><field name="code">333</field></record>
+<record id="334" model="l10n.ec.country.payment.regime"><field name="name">QATAR</field><field name="code">334</field></record>
+<record id="335" model="l10n.ec.country.payment.regime"><field name="name">MALDIVAS</field><field name="code">335</field></record>
+<record id="336" model="l10n.ec.country.payment.regime"><field name="name">NEPAL</field><field name="code">336</field></record>
+<record id="337" model="l10n.ec.country.payment.regime"><field name="name">OMAN</field><field name="code">337</field></record>
+<record id="338" model="l10n.ec.country.payment.regime"><field name="name">SINGAPUR</field><field name="code">338</field></record>
+<record id="339" model="l10n.ec.country.payment.regime"><field name="name">SRI LANKA (CEILAN)</field><field name="code">339</field></record>
+<record id="341" model="l10n.ec.country.payment.regime"><field name="name">VIETNAM</field><field name="code">341</field></record>
+<record id="342" model="l10n.ec.country.payment.regime"><field name="name">YEMEN</field><field name="code">342</field></record>
+<record id="343" model="l10n.ec.country.payment.regime"><field name="name">ISLAS HEARD Y MCDONALD</field><field name="code">343</field></record>
+<record id="344" model="l10n.ec.country.payment.regime"><field name="name">BRUNEI DARUSSALAM</field><field name="code">344</field></record>
+<record id="346" model="l10n.ec.country.payment.regime"><field name="name">TURQUIA</field><field name="code">346</field></record>
+<record id="347" model="l10n.ec.country.payment.regime"><field name="name">AZERBAIJAN</field><field name="code">347</field></record>
+<record id="348" model="l10n.ec.country.payment.regime"><field name="name">KAZAJSTAN</field><field name="code">348</field></record>
+<record id="349" model="l10n.ec.country.payment.regime"><field name="name">KIRGUIZISTAN</field><field name="code">349</field></record>
+<record id="350" model="l10n.ec.country.payment.regime"><field name="name">TAJIKISTAN</field><field name="code">350</field></record>
+<record id="351" model="l10n.ec.country.payment.regime"><field name="name">TURKMENISTAN</field><field name="code">351</field></record>
+<record id="352" model="l10n.ec.country.payment.regime"><field name="name">UZBEKISTAN</field><field name="code">352</field></record>
+<record id="353" model="l10n.ec.country.payment.regime"><field name="name">PALESTINA</field><field name="code">353</field></record>
+<record id="354" model="l10n.ec.country.payment.regime"><field name="name">HONG KONG</field><field name="code">354</field></record>
+<record id="355" model="l10n.ec.country.payment.regime"><field name="name">MACAO</field><field name="code">355</field></record>
+<record id="356" model="l10n.ec.country.payment.regime"><field name="name">ARMENIA</field><field name="code">356</field></record>
+<record id="382" model="l10n.ec.country.payment.regime"><field name="name">MONTENEGRO</field><field name="code">382</field></record>
+<record id="402" model="l10n.ec.country.payment.regime"><field name="name">BURKINA FASO</field><field name="code">402</field></record>
+<record id="403" model="l10n.ec.country.payment.regime"><field name="name">ARGELIA</field><field name="code">403</field></record>
+<record id="404" model="l10n.ec.country.payment.regime"><field name="name">BURUNDI</field><field name="code">404</field></record>
+<record id="405" model="l10n.ec.country.payment.regime"><field name="name">CAMERUN</field><field name="code">405</field></record>
+<record id="406" model="l10n.ec.country.payment.regime"><field name="name">CONGO</field><field name="code">406</field></record>
+<record id="407" model="l10n.ec.country.payment.regime"><field name="name">ETIOPIA</field><field name="code">407</field></record>
+<record id="408" model="l10n.ec.country.payment.regime"><field name="name">GAMBIA</field><field name="code">408</field></record>
+<record id="409" model="l10n.ec.country.payment.regime"><field name="name">GUINEA</field><field name="code">409</field></record>
+<record id="410" model="l10n.ec.country.payment.regime"><field name="name">LIBERIA</field><field name="code">410</field></record>
+<record id="412" model="l10n.ec.country.payment.regime"><field name="name">MADAGASCAR</field><field name="code">412</field></record>
+<record id="413" model="l10n.ec.country.payment.regime"><field name="name">MALAWI</field><field name="code">413</field></record>
+<record id="414" model="l10n.ec.country.payment.regime"><field name="name">MALI</field><field name="code">414</field></record>
+<record id="415" model="l10n.ec.country.payment.regime"><field name="name">MARRUECOS</field><field name="code">415</field></record>
+<record id="416" model="l10n.ec.country.payment.regime"><field name="name">MAURITANIA</field><field name="code">416</field></record>
+<record id="417" model="l10n.ec.country.payment.regime"><field name="name">NIGERIA</field><field name="code">417</field></record>
+<record id="419" model="l10n.ec.country.payment.regime"><field name="name">ZIMBABWE (RHODESIA)</field><field name="code">419</field></record>
+<record id="420" model="l10n.ec.country.payment.regime"><field name="name">SENEGAL</field><field name="code">420</field></record>
+<record id="421" model="l10n.ec.country.payment.regime"><field name="name">SUDAN</field><field name="code">421</field></record>
+<record id="422" model="l10n.ec.country.payment.regime"><field name="name">SUDAFRICA  (CISKEI)</field><field name="code">422</field></record>
+<record id="423" model="l10n.ec.country.payment.regime"><field name="name">SIERRA LEONA</field><field name="code">423</field></record>
+<record id="425" model="l10n.ec.country.payment.regime"><field name="name">TANZANIA</field><field name="code">425</field></record>
+<record id="426" model="l10n.ec.country.payment.regime"><field name="name">UGANDA</field><field name="code">426</field></record>
+<record id="427" model="l10n.ec.country.payment.regime"><field name="name">ZAMBIA</field><field name="code">427</field></record>
+<record id="428" model="l10n.ec.country.payment.regime"><field name="name">ÅLAND ISLANDS</field><field name="code">428</field></record>
+<record id="429" model="l10n.ec.country.payment.regime"><field name="name">BENIN</field><field name="code">429</field></record>
+<record id="430" model="l10n.ec.country.payment.regime"><field name="name">BOTSWANA</field><field name="code">430</field></record>
+<record id="431" model="l10n.ec.country.payment.regime"><field name="name">REPUBLICA CENTROAFRICANA</field><field name="code">431</field></record>
+<record id="432" model="l10n.ec.country.payment.regime"><field name="name">COSTA DE MARFIL</field><field name="code">432</field></record>
+<record id="433" model="l10n.ec.country.payment.regime"><field name="name">CHAD</field><field name="code">433</field></record>
+<record id="434" model="l10n.ec.country.payment.regime"><field name="name">EGIPTO</field><field name="code">434</field></record>
+<record id="435" model="l10n.ec.country.payment.regime"><field name="name">GABON</field><field name="code">435</field></record>
+<record id="436" model="l10n.ec.country.payment.regime"><field name="name">GHANA</field><field name="code">436</field></record>
+<record id="437" model="l10n.ec.country.payment.regime"><field name="name">GUINEA-BISSAU</field><field name="code">437</field></record>
+<record id="438" model="l10n.ec.country.payment.regime"><field name="name">GUINEA ECUATORIAL</field><field name="code">438</field></record>
+<record id="439" model="l10n.ec.country.payment.regime"><field name="name">KENIA</field><field name="code">439</field></record>
+<record id="440" model="l10n.ec.country.payment.regime"><field name="name">LESOTHO</field><field name="code">440</field></record>
+<record id="441" model="l10n.ec.country.payment.regime"><field name="name">MAURICIO</field><field name="code">441</field></record>
+<record id="442" model="l10n.ec.country.payment.regime"><field name="name">MOZAMBIQUE</field><field name="code">442</field></record>
+<record id="443" model="l10n.ec.country.payment.regime"><field name="name">MAYOTTE</field><field name="code">443</field></record>
+<record id="444" model="l10n.ec.country.payment.regime"><field name="name">NIGER</field><field name="code">444</field></record>
+<record id="445" model="l10n.ec.country.payment.regime"><field name="name">RWANDA</field><field name="code">445</field></record>
+<record id="446" model="l10n.ec.country.payment.regime"><field name="name">SEYCHELLES</field><field name="code">446</field></record>
+<record id="447" model="l10n.ec.country.payment.regime"><field name="name">SAHARA OCCIDENTAL</field><field name="code">447</field></record>
+<record id="448" model="l10n.ec.country.payment.regime"><field name="name">SOMALIA</field><field name="code">448</field></record>
+<record id="449" model="l10n.ec.country.payment.regime"><field name="name">SANTO TOME Y PRINCIPE</field><field name="code">449</field></record>
+<record id="450" model="l10n.ec.country.payment.regime"><field name="name">SWAZILANDIA</field><field name="code">450</field></record>
+<record id="451" model="l10n.ec.country.payment.regime"><field name="name">TOGO</field><field name="code">451</field></record>
+<record id="452" model="l10n.ec.country.payment.regime"><field name="name">TUNEZ</field><field name="code">452</field></record>
+<record id="453" model="l10n.ec.country.payment.regime"><field name="name">ZAIRE</field><field name="code">453</field></record>
+<record id="454" model="l10n.ec.country.payment.regime"><field name="name">ANGOLA</field><field name="code">454</field></record>
+<record id="456" model="l10n.ec.country.payment.regime"><field name="name">CABO VERDE</field><field name="code">456</field></record>
+<record id="458" model="l10n.ec.country.payment.regime"><field name="name">COMORAS</field><field name="code">458</field></record>
+<record id="459" model="l10n.ec.country.payment.regime"><field name="name">DJIBOUTI</field><field name="code">459</field></record>
+<record id="460" model="l10n.ec.country.payment.regime"><field name="name">NAMIBIA</field><field name="code">460</field></record>
+<record id="463" model="l10n.ec.country.payment.regime"><field name="name">ERITREA</field><field name="code">463</field></record>
+<record id="464" model="l10n.ec.country.payment.regime"><field name="name">MOROCCO</field><field name="code">464</field></record>
+<record id="465" model="l10n.ec.country.payment.regime"><field name="name">REUNION</field><field name="code">465</field></record>
+<record id="466" model="l10n.ec.country.payment.regime"><field name="name">SANTA ELENA</field><field name="code">466</field></record>
+<record id="499" model="l10n.ec.country.payment.regime"><field name="name">JERSEY</field><field name="code">499</field></record>
+<record id="501" model="l10n.ec.country.payment.regime"><field name="name">AUSTRALIA</field><field name="code">501</field></record>
+<record id="503" model="l10n.ec.country.payment.regime"><field name="name">NUEVA ZELANDA</field><field name="code">503</field></record>
+<record id="504" model="l10n.ec.country.payment.regime"><field name="name">SAMOA OCCIDENTAL</field><field name="code">504</field></record>
+<record id="506" model="l10n.ec.country.payment.regime"><field name="name">FIJI</field><field name="code">506</field></record>
+<record id="507" model="l10n.ec.country.payment.regime"><field name="name">PAPUA NUEVA GUINEA</field><field name="code">507</field></record>
+<record id="508" model="l10n.ec.country.payment.regime"><field name="name">TONGA</field><field name="code">508</field></record>
+<record id="509" model="l10n.ec.country.payment.regime"><field name="name">PALAO  (BELAU) ISLAS</field><field name="code">509</field></record>
+<record id="510" model="l10n.ec.country.payment.regime"><field name="name">KIRIBATI</field><field name="code">510</field></record>
+<record id="511" model="l10n.ec.country.payment.regime"><field name="name">MARSHALL ISLAS</field><field name="code">511</field></record>
+<record id="512" model="l10n.ec.country.payment.regime"><field name="name">MICRONESIA</field><field name="code">512</field></record>
+<record id="513" model="l10n.ec.country.payment.regime"><field name="name">NAURU</field><field name="code">513</field></record>
+<record id="514" model="l10n.ec.country.payment.regime"><field name="name">SALOMON  ISLAS</field><field name="code">514</field></record>
+<record id="515" model="l10n.ec.country.payment.regime"><field name="name">TUVALU</field><field name="code">515</field></record>
+<record id="516" model="l10n.ec.country.payment.regime"><field name="name">VANUATU</field><field name="code">516</field></record>
+<record id="517" model="l10n.ec.country.payment.regime"><field name="name">GUAM</field><field name="code">517</field></record>
+<record id="518" model="l10n.ec.country.payment.regime"><field name="name">ISLAS COCOS (KEELING)</field><field name="code">518</field></record>
+<record id="519" model="l10n.ec.country.payment.regime"><field name="name">ISLAS COOK</field><field name="code">519</field></record>
+<record id="520" model="l10n.ec.country.payment.regime"><field name="name">ISLAS NAVIDAD</field><field name="code">520</field></record>
+<record id="521" model="l10n.ec.country.payment.regime"><field name="name">MIDWAY ISLAS</field><field name="code">521</field></record>
+<record id="522" model="l10n.ec.country.payment.regime"><field name="name">NIUE ISLA</field><field name="code">522</field></record>
+<record id="523" model="l10n.ec.country.payment.regime"><field name="name">NORFOLK ISLA</field><field name="code">523</field></record>
+<record id="524" model="l10n.ec.country.payment.regime"><field name="name">NUEVA  CALEDONIA</field><field name="code">524</field></record>
+<record id="525" model="l10n.ec.country.payment.regime"><field name="name">PITCAIRN, ISLA</field><field name="code">525</field></record>
+<record id="526" model="l10n.ec.country.payment.regime"><field name="name">POLINESIA FRANCESA</field><field name="code">526</field></record>
+<record id="529" model="l10n.ec.country.payment.regime"><field name="name">TIMOR DEL ESTE</field><field name="code">529</field></record>
+<record id="530" model="l10n.ec.country.payment.regime"><field name="name">TOKELAI</field><field name="code">530</field></record>
+<record id="531" model="l10n.ec.country.payment.regime"><field name="name">WAKE ISLA</field><field name="code">531</field></record>
+<record id="532" model="l10n.ec.country.payment.regime"><field name="name">WALLIS Y FUTUNA, ISLAS</field><field name="code">532</field></record>
+<record id="534" model="l10n.ec.country.payment.regime"><field name="name">SINT MAARTEN (DUTCH PART)</field><field name="code">534</field></record>
+<record id="590" model="l10n.ec.country.payment.regime"><field name="name">SAINT BARTHELEMY</field><field name="code">590</field></record>
+<record id="593" model="l10n.ec.country.payment.regime"><field name="name">ECUADOR</field><field name="code">593</field></record>
+<record id="594" model="l10n.ec.country.payment.regime"><field name="name">AGUAS INTERNACIONALES</field><field name="code">594</field></record>
+<record id="595" model="l10n.ec.country.payment.regime"><field name="name">ALTO VOLTA</field><field name="code">595</field></record>
+<record id="596" model="l10n.ec.country.payment.regime"><field name="name">BIELORRUSIA</field><field name="code">596</field></record>
+<record id="597" model="l10n.ec.country.payment.regime"><field name="name">COTE DÍVOIRE</field><field name="code">597</field></record>
+<record id="598" model="l10n.ec.country.payment.regime"><field name="name">CYPRUS</field><field name="code">598</field></record>
+<record id="599" model="l10n.ec.country.payment.regime"><field name="name">REPUBLICA CHECA</field><field name="code">599</field></record>
+<record id="600" model="l10n.ec.country.payment.regime"><field name="name">FALKLAND ISLANDS</field><field name="code">600</field></record>
+<record id="601" model="l10n.ec.country.payment.regime"><field name="name">LATVIA</field><field name="code">601</field></record>
+<record id="602" model="l10n.ec.country.payment.regime"><field name="name">LIBIA</field><field name="code">602</field></record>
+<record id="603" model="l10n.ec.country.payment.regime"><field name="name">NORTHERN MARIANA ISL</field><field name="code">603</field></record>
+<record id="604" model="l10n.ec.country.payment.regime"><field name="name">ST. PIERRE AND MIQUE</field><field name="code">604</field></record>
+<record id="605" model="l10n.ec.country.payment.regime"><field name="name">SYRIAN ARAB REPUBLIC</field><field name="code">605</field></record>
+<record id="606" model="l10n.ec.country.payment.regime"><field name="name">TERRITORIO ANTARTICO BRITANICO</field><field name="code">606</field></record>
+<record id="607" model="l10n.ec.country.payment.regime"><field name="name">TERRITORIO BRITANICO OCEANO IN</field><field name="code">607</field></record>
+<record id="688" model="l10n.ec.country.payment.regime"><field name="name">SERBIA</field><field name="code">688</field></record>
+<record id="831" model="l10n.ec.country.payment.regime"><field name="name">GUERNSEY</field><field name="code">831</field></record>
+<record id="833" model="l10n.ec.country.payment.regime"><field name="name">ISLE OF MAN</field><field name="code">833</field></record>
+
+</odoo>

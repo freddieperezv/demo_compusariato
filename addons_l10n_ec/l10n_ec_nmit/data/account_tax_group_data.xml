@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="l10n_ec.tax_group_vat_12" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_vat14" model="account.tax.group">
+        <field name="always_in_totals" eval="False"/>
+    </record>
+    <record id="l10n_ec.tax_group_vat0" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_vat_not_charged" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_vat_excempt" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_ice" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_irbpnr" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+    <record id="l10n_ec.tax_group_withhold_vat" model="account.tax.group">
+        <field name="always_in_totals" eval="False"/>
+    </record>
+    <record id="l10n_ec.tax_group_withhold_income" model="account.tax.group">
+        <field name="always_in_totals" eval="False"/>
+    </record>
+    <record id="l10n_ec.tax_group_outflows" model="account.tax.group">
+        <field name="always_in_totals" eval="False"/>
+    </record>
+    <record id="l10n_ec.tax_group_others" model="account.tax.group">
+        <field name="always_in_totals" eval="True"/>
+    </record>
+</odoo>

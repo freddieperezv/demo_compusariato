@@ -1,0 +1,304 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ec_ats
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 21:45+0000\n"
+"PO-Revision-Date: 2022-05-05 21:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.sale_ats_template
+msgid "0.00"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.ui.menu,name:l10n_ec_ats.nmit_ats_menu
+msgid "ATS"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model,name:l10n_ec_ats.model_account_ats
+msgid "Account Ats"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.actions.act_window,name:l10n_ec_ats.account_ats_act_window
+#: model:ir.ui.menu,name:l10n_ec_ats.account_ats_menu
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.account_ats_form_view
+msgid "AccountATS"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_res_partner_view_form
+msgid "Anexo Transaccional"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_pay_resident_view
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_type_foreign_tax_regime_view
+msgid "Area"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.account_ats_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__code
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__code
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__code
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__code
+msgid "Code"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__code2
+msgid "Code 2"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.account_ats_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model,name:l10n_ec_ats.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_ec_ats
+#: model:ir.actions.act_window,name:l10n_ec_ats.nmit_country_payment_regime_view_action
+#: model:ir.model,name:l10n_ec_ats.model_l10n_ec_country_payment_regime
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__name
+#: model:ir.ui.menu,name:l10n_ec_ats.nmit_country_payment_regime_view_menu
+msgid "Country Payment Regime"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_country_payment_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_country_payment_regime_id
+msgid "Country to which the payment is made"
+msgstr "País al que se realiza el pago"
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__create_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__create_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__create_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__create_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__create_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__create_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__create_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__create_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__name
+msgid "Date"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__display_name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__display_name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__display_name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__display_name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__l10n_ec_entity
+msgid "Emission Entity"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__state
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__state
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__state
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__state
+msgid "Estado"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_res_partner_view_form
+msgid "Grupo 1"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_res_partner_view_form
+msgid "Grupo 2"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__name
+msgid "Haven Country"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model,name:l10n_ec_ats.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats____last_update
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime____last_update
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident____last_update
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country____last_update
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__write_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__write_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__write_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__write_uid
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_account_ats__write_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_country_payment_regime__write_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__write_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__write_date
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.purchase_ats_template
+msgid "NA"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.sale_ats_template
+msgid "NO"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.actions.act_window,name:l10n_ec_ats.nmit_pay_residents_action
+#: model:ir.model,name:l10n_ec_ats.model_l10n_ec_pay_resident
+#: model:ir.ui.menu,name:l10n_ec_ats.nmit_pay_residents_menu
+msgid "Pay Resident"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_pay_resident__name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_pay_residents_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_pay_residents_id
+msgid "Payment resident"
+msgstr "Pago a residente o no residente"
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_country_payment_regime_view
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.nmit_tax_haven_country_view
+msgid "País"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_related_party
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_related_party
+msgid "Related party"
+msgstr "Parte relacionada"
+
+#. module: l10n_ec_ats
+#: model:ir.actions.act_window,name:l10n_ec_ats.nmit_tax_haven_country_view_action
+#: model:ir.model,name:l10n_ec_ats.model_l10n_ec_tax_haven_country
+#: model:ir.ui.menu,name:l10n_ec_ats.nmit_tax_haven_country_view_menu
+msgid "Tax Haven Country"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_tax_haven_country__name2
+msgid "Tax Haven Country link"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model_terms:ir.actions.act_window,help:l10n_ec_ats.account_ats_act_window
+msgid "There is no examples click here to add new AccountATS."
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.actions.act_window,name:l10n_ec_ats.nmit_type_foreign_tax_regime_view_action
+#: model:ir.model,name:l10n_ec_ats.model_l10n_ec_type_foreign_tax_regime
+#: model:ir.ui.menu,name:l10n_ec_ats.nmit_type_foreign_tax_regime_view_menu
+msgid "Type Foreign Tax Regime"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_l10n_ec_type_foreign_tax_regime__name
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_type_foreign_tax_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_type_foreign_tax_regime_id
+msgid "Type foreign tax regime"
+msgstr "Tipo de régimen fiscal del exterior"
+
+#. module: l10n_ec_ats
+#: code:addons/l10n_ec_ats/models/account_move.py:0
+#, python-format
+msgid "Untaxed Amount"
+msgstr ""
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_double_taxation_applies_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_double_taxation_applies_id
+msgid "double taxation applies"
+msgstr "Aplica doble tributación"
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_name_preferential_tax_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_name_preferential_tax_regime_id
+msgid "name_preferential_tax_regime"
+msgstr "Denominación régimen fiscal preferente"
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_pay_subject_wthlg_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_pay_subject_wthlg_id
+msgid "pay subject wthlg"
+msgstr "Pago sujeto a retención en aplicación nc"
+
+#. module: l10n_ec_ats
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_partner__l10n_ec_tax_haven_country_id
+#: model:ir.model.fields,field_description:l10n_ec_ats.field_res_users__l10n_ec_tax_haven_country_id
+msgid "tax haven country"
+msgstr "País al que se efectúa el pago paraiso fiscal"
+
+#. module: l10n_ec_ats
+#: model_terms:ir.ui.view,arch_db:l10n_ec_ats.ats_template
+msgid "totalVentas"
+msgstr ""

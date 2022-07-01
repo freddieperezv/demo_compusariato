@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- QWeb Reports -->
+  <record id="account.account_invoices" model="ir.actions.report">    
+    <field name="binding_model_id" ref=""/>
+  </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_wh,access_account_wh,model_account_wh,base.group_user,1,1,1,1
+access_account_wh_line,access_account_wh_line,model_account_wh_line,base.group_user,1,1,1,1
+access_account_agent,access_account_agent,model_account_agent,base.group_user,1,1,1,1
+access_account_l10n_ec_staring_sec,access_account_l10n_ec_staring_sec,model_account_l10n_ec_staring_sec,base.group_user,1,1,1,1
+acces_tax_support,Ats sustento tributario,model_l10n_ec_tax_support,account.group_account_user,1,1,1,1
+acces_tax_support_map,Ats Mapeo sustento y tipo de documento,model_l10n_ec_tax_support_mapping,account.group_account_user,1,1,1,1
+access_account_tag,document tag,model_account_tag,account.group_account_invoice,1,1,0,0
+access_user_account_tag,document tag,model_account_tag,account.group_account_user,1,1,1,0
+access_admin_account_tag,document tag,model_account_tag,account.group_account_manager,1,1,1,1
+access_account_account_tag_base_user,account.account.tag,account.model_account_account_tag,base.group_user,1,1,0,0
+access_batch_move_edi_web_service,batch.move.edi.web.service,model_batch_move_edi_web_service,base.group_user,1,1,1,1
+access_batch_wh_edi_web_service,batch.wh.edi.web.service,model_batch_wh_edi_web_service,base.group_user,1,1,1,1

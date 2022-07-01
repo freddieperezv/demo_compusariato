@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ats_pay_resident,Ats pagos residente,model_l10n_ec_pay_resident,account.group_account_user,1,1,1,1
+ats_type_foreign_tax_regime,Ats tipo de  régimen fiscal del exterior,model_l10n_ec_type_foreign_tax_regime,account.group_account_user,1,1,1,1
+ats_country_payment_regime,Ats país al que se efectúa el pago en regimen,model_l10n_ec_country_payment_regime,account.group_account_user,1,1,1,1
+ats_tax_haven_country,Ats país paraiso fiscal,model_l10n_ec_tax_haven_country,account.group_account_user,1,1,1,1
+access_account_ats,access_account_ats,model_account_ats,,1,1,1,1

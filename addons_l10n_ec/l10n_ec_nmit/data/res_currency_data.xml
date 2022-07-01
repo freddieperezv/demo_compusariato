@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- <record id="res_currency_form_inherit" model="ir.ui.view"> -->
+        <record id="base.USD" model="res.currency"> 
+          <!-- <field name="inherit_id" ref="base.view_currency_form"/> -->
+          <field name="l10n_ec_currency">DOLAR</field> 
+        </record>    
+
+    </data>
+</odoo>

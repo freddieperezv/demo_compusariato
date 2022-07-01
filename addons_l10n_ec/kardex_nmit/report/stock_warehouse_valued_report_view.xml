@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="stock_warehouse_valued_report_view_tree" model="ir.ui.view">
+            <field name="name">stock_warehouse_valued_report_view_tree</field>
+            <field name="model">stock.warehouse.valued.report</field>
+            <field name="arch" type="xml">
+                <tree string="Stock By Warehouse Valued">
+                    <field name="company_id" optional="show" />
+                    <field name="move_id" optional="hide" />
+                    <field name="date" optional="show" />
+                    <field name="picking_id" optional="hide" />
+                    <field name="purchase_id" optional="hide" />
+                    <field name="sale_order_id" optional="hide" />
+                    <!-- <field name="inventory_id" optional="hide" /> -->
+                    <field name="scrap_id" optional="hide" />
+                    <field name="product_id" optional="show" />
+                    <field name="product_tmpl_id" optional="hide" />
+                    <field name="categ_id" optional="hide" />
+                    <field name="warehouse_id" optional="show" />
+                    <field name="partner_id" optional="show" />
+                    <field name="partner_country_id" optional="hide" />
+                    <field name="uom_id" optional="show" />
+                    <field name="product_qty" />
+                    <field name="price_unit" />
+                    <field name="value" />
+                    <field name="move_type" optional="show" />
+                    <field name="transaction_type" optional="hide" />
+                    <field name="partner_type" optional="hide" />
+                </tree>
+            </field>
+        </record>
+        <record id="view_stock_warehouse_valued_report_pivot" model="ir.ui.view">
+            <field name="name">stock.warehouse.valued.report.pivot</field>
+            <field name="model">stock.warehouse.valued.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Valued Moves" disable_linking="True">
+                    <field name="categ_id" type="row" />
+                    <field name="date" type="col" />
+                    <field name="warehouse_id" type="col" />
+                    <field name="move_type" type="col" />
+                    <field name="product_qty" type="measure" />
+                    <field name="value" type="measure" />
+                </pivot>
+            </field>
+        </record>
+        <record id="view_stock_warehouse_valued_report_graph" model="ir.ui.view">
+            <field name="name">stock.warehouse.valued.report.graph</field>
+            <field name="model">stock.warehouse.valued.report</field>
+            <field name="arch" type="xml">
+                <graph string="Valued Moves" type="line">
+                    <field name="warehouse_id" />
+                    <field name="value" type="measure" />
+                </graph>
+            </field>
+        </record>
+        <record id="view_stock_warehouse_valued_report_search" model="ir.ui.view">
+            <field name="name">stock.warehouse.valued.report.search</field>
+            <field name="model">stock.warehouse.valued.report</field>
+            <field name="arch" type="xml">
+                <search string="Valued Moves">
+                    <field name="product_id" string="Product" />
+                    <field name="product_tmpl_id" string="Product" />
+                    <field name="categ_id" string="Category" />
+                    <field name="warehouse_id" string="Warehouse" />
+                    <field name="partner_id" string="Partner" />
+                    <filter
+                        string="Date"
+                        name="filter_date"
+                        date="date"
+                        default_period="this_month"
+                    />
+                    <separator />
+                    <filter
+                        string="Partner National"
+                        name="filter_partner_national"
+                        domain="[('partner_type', '=', 'national')]"
+                    />
+                    <filter
+                        string="Partner Foreign"
+                        name="filter_partner_foreign"
+                        domain="[('partner_type', '=', 'foreign')]"
+                    />
+                    <separator />
+                    <filter
+                        string="Purchases"
+                        name="filter_purchase"
+                        domain="[('transaction_type', '=', 'purchase')]"
+                    />
+                    <filter
+                        string="Sales"
+                        name="filter_sales"
+                        domain="[('transaction_type', '=', 'sales')]"
+                    />
+                    <filter
+                        string="Inventory Adjust"
+                        name="filter_inventory_adjust"
+                        domain="[('transaction_type', '=', 'inventory_adjust')]"
+                    />
+                    <filter
+                        string="Scrap"
+                        name="filter_scrap"
+                        domain="[('transaction_type', '=', 'scrap')]"
+                    />
+                    <filter
+                        string="Transfer"
+                        name="filter_transfer"
+                        domain="[('transaction_type', '=', 'transfer')]"
+                    />
+                    <group expand='0' string='Group by...'>
+                        <filter
+                            string='Product'
+                            name="product"
+                            domain="[]"
+                            context="{'group_by' : 'product_id'}"
+                        />
+                        <filter
+                            string='Product Template'
+                            name="product_tmpl"
+                            domain="[]"
+                            context="{'group_by' : 'product_tmpl_id'}"
+                        />
+                        <filter
+                            string='Category'
+                            name="categ"
+                            domain="[]"
+                            context="{'group_by' : 'categ_id'}"
+                        />
+                        <filter
+                            string='Warehouse'
+                            name="warehouse"
+                            domain="[]"
+                            context="{'group_by' : 'warehouse_id'}"
+                        />
+                        <filter
+                            string='Partner'
+                            name="group_by_partner"
+                            domain="[]"
+                            context="{'group_by' : 'partner_id'}"
+                        />
+                        <separator />
+                        <filter
+                            string='Move Type'
+                            name="group_move_type"
+                            domain="[]"
+                            context="{'group_by' : 'move_type'}"
+                        />
+                        <filter
+                            string='Transaction Type'
+                            name="group_transaction_type"
+                            domain="[]"
+                            context="{'group_by' : 'transaction_type'}"
+                        />
+                        <separator />
+                        <filter
+                            string='Date'
+                            name="group_date"
+                            domain="[]"
+                            context="{'group_by' : 'date'}"
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record
+            id="action_stock_warehouse_valued_report_report"
+            model="ir.actions.act_window"
+        >
+            <field name="name">Valued Report by Warehouse</field>
+            <field name="res_model">stock.warehouse.valued.report</field>
+            <field name="view_mode">graph,pivot,tree</field>
+            <field name="context">{}</field>
+            <field
+                name="search_view_id"
+                ref="view_stock_warehouse_valued_report_search"
+            />
+        </record>
+        <menuitem
+            id="menu_action_stock_warehouse_valued_report_report"
+            name="Valued Report by Warehouse"
+            parent="stock.menu_warehouse_report"
+            action="action_stock_warehouse_valued_report_report"
+            sequence="100"
+        />
+    </data>
+</odoo>

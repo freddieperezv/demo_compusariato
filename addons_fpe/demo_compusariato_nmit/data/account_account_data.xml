@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="nmit_ec510113" model="account.account">
+            <field name="name">Costo de venta productos core</field>
+            <field name="code">510113</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec410103" model="account.account">
+            <field name="name">Venta de productos core</field>
+            <field name="code">410103</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec210201" model="account.account">
+            <field name="name">Facturas por recibir Locales</field>
+            <field name="code">210201</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec210202" model="account.account">
+            <field name="name">Facturas por recibir Exterior</field>
+            <field name="code">210202</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="reconcile" eval="False"/>
+        </record>    
+
+        <record id="nmit_ec11010205" model="account.account">
+            <field name="name">Banco del Pacífico -AHO #0001234</field>
+            <field name="code">11010205</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="reconcile" eval="False"/>
+        </record> 
+
+        <record id="nmit_ec11010206" model="account.account">
+            <field name="name">Banco Bolivariano -AHO #00084252</field>
+            <field name="code">11010206</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec11010207" model="account.account">
+            <field name="name">Banco de Guayaquil -AHO #00089952</field>
+            <field name="code">11010207</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="reconcile" eval="False"/>
+        </record> 
+
+        <record id="nmit_ec11010102" model="account.account">
+            <field name="name">Caja General</field>
+            <field name="code">11010102</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="reconcile" eval="False"/>
+        </record> 
+
+        <record id="nmit_ec110310" model="account.account">
+            <field name="name">Ajuste de Inventario</field>
+            <field name="code">110310</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec110311" model="account.account">
+            <field name="name">Ajuste de Inventario por desecho</field>
+            <field name="code">110311</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec52020406" model="account.account">
+            <field name="name">Mantenimiento de equipos</field>
+            <field name="code">52020406</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec52020407" model="account.account">
+            <field name="name">Mantenimiento de instalaciones</field>
+            <field name="code">52020407</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="reconcile" eval="False"/>
+        </record>
+
+        <record id="nmit_ec52020408" model="account.account">
+            <field name="name">Papeleria y utiles de oficina</field>
+            <field name="code">52020408</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="reconcile" eval="False"/>
+        </record>            
+    </data>             
+</odoo>

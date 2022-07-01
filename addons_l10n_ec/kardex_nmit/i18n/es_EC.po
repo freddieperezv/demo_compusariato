@@ -1,0 +1,676 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kardex_nmit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-27 19:01+0000\n"
+"PO-Revision-Date: 2021-09-27 14:13-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_EC\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "0.0"
+msgstr "0.0"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid ""
+"<br/>\n"
+"                                <span><strong>Date from: </strong></span><strong/>"
+msgstr ""
+"<br/>\n"
+"                                <span><strong>Fecha Desde: </strong></span><strong/>"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid ""
+"<br/>\n"
+"                                <span><strong>Date to: </strong></span><strong/>"
+msgstr ""
+"<br/>\n"
+"                                <span><strong>Fecha Hasta: </strong></span><strong/>"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid ""
+"<br/>\n"
+"                                <span><strong>Product: </strong></span><strong/>"
+msgstr ""
+"<br/>\n"
+"                                <span><strong>Producto: </strong></span><strong/>"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid ""
+"<br/>\n"
+"                                <span><strong>Valuation: </strong></span><strong/>"
+msgstr ""
+"<br/>\n"
+"                                <span><strong>Valoración: </strong></span><strong/>"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "<span><strong>Warehouse: </strong></span><strong/>"
+msgstr "<span><strong>Almacén: </strong></span><strong/>"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#, python-format
+msgid "AVCO(Average)"
+msgstr "AVCO(Costo Promedio)"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_inventario
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex_month
+msgid "Cancel"
+msgstr "Cancelado"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__categ_id
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Category"
+msgstr "Categoría"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid ""
+"Cliente/ \n"
+" Proveedor"
+msgstr ""
+"Cliente/ \n"
+" Proveedor"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Code"
+msgstr "Código"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__company_id
+#, python-format
+msgid "Company"
+msgstr "Compañía"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Cost Total"
+msgstr "Costo Total"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Cost Unit"
+msgstr "Costo Unitario"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Cost unit"
+msgstr "Costo Unitario"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__partner_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__create_uid
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__create_uid
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__create_date
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__create_date
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__date_from
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__date_from
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__date_from
+#, python-format
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__date_to
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__date_to
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__date_to
+#, python-format
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#, python-format
+msgid "Date from"
+msgstr "Fecha Hasta"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Date to"
+msgstr "Fecha Hasta"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#, python-format
+msgid "Debe ingresar los campos fechas desde y fecha hasta"
+msgstr "Debe ingresar los campos fechas desde y fecha hasta"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Destination Location"
+msgstr "Ubicación de Destino"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__display_name
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__display_name
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__display_name
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__display_name
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Document Number"
+msgstr "Número de Documento"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Entry"
+msgstr "Ingresos"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_kardex_wizard__report__xls
+msgid "Excel"
+msgstr "Excel"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__date
+msgid "Fecha Hasta"
+msgstr "Fecha Hasta"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Forecast Quantity"
+msgstr "Cantidad de pronóstico"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__partner_type__foreign
+msgid "Foreign"
+msgstr "Extranjero"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex
+msgid "Formato"
+msgstr "Formato"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Free To Use Quantity"
+msgstr "Cantidad libre de usar"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_inventario
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex_month
+msgid "Generar Reporte"
+msgstr "Generar Reporte"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Group by..."
+msgstr "Group by..."
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#, python-format
+msgid "Incoming"
+msgstr "Entrante"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__move_type__input
+msgid "Input"
+msgstr "Ingreso"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_inventario
+msgid "Inventario"
+msgstr "Inventario"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex
+msgid "Inventario Kardex"
+msgstr "Inventario Kardex"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_report_wizard_kardex_month
+msgid "Inventario Kardex por Fecha"
+msgstr "Inventario Kardex por Fecha"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__transaction_type__inventory_adjust
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Inventory Adjust"
+msgstr "Ajuste de Inventario"
+
+#. module: kardex_nmit
+#: model:ir.actions.act_window,name:kardex_nmit.action_wizards_reports_kardex
+#: model:ir.ui.menu,name:kardex_nmit.menu_report_kardex_new
+msgid "Kardex"
+msgstr "Kardex"
+
+#. module: kardex_nmit
+#: model:ir.actions.report,name:kardex_nmit.action_report_kardex_pdf
+msgid "Kardex PDF"
+msgstr "Kardex PDF"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard____last_update
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard____last_update
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf____last_update
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard____last_update
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__write_uid
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__write_uid
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__write_date
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__write_date
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Lot"
+msgstr "Lote"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Lote"
+msgstr "Lote"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__lot_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__lot_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__lot_id
+msgid "Lote/Serie"
+msgstr "Lote/Serie"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__date
+msgid "Move Date"
+msgstr "Fecha de Movimiento"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__move_type
+msgid "Move Direction"
+msgstr "Dirección Movimiento"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Move Type"
+msgstr "Tipo de Movimiento"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__partner_type__national
+msgid "National"
+msgstr "Nacional"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "N° Document"
+msgstr "N° Documento"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Origin Location"
+msgstr "Ubicación Origen"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#, python-format
+msgid "Outgoing"
+msgstr "Saliente"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__move_type__output
+msgid "Output"
+msgstr "Salida"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_kardex_wizard__report__pdf
+msgid "PDF"
+msgstr "PDF"
+
+#. module: kardex_nmit
+#: model:ir.model,name:kardex_nmit.model_stock_kardex_wizard_pdf
+msgid "PDF kardex report"
+msgstr "Reporte PDF Kardex"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__partner_id
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Partner Foreign"
+msgstr "Empresa Extrajera"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Partner National"
+msgstr "Empresa Nacional"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__partner_type
+msgid "Partner Type"
+msgstr "Tipo de Empresa"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__price_unit
+msgid "Price Unit"
+msgstr "Precio Unitario"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__product_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__product_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__product_id
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__product_id
+msgid "Product Variant"
+msgstr "Variante de Producto"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__transaction_type__purchase
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__purchase_id
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__product_qty
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#, python-format
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Quantity On Hand"
+msgstr "Cantidad en mano"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Reference Destination"
+msgstr "Referencia de Destino"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Reference Origin"
+msgstr "Referencia de Origen"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__report
+msgid "Report"
+msgstr "Reporte"
+
+#. module: kardex_nmit
+#: model:ir.actions.act_window,name:kardex_nmit.action_wizards_reports_inventario
+#: model:ir.ui.menu,name:kardex_nmit.menu_report_inventario_new
+msgid "Reporte Inventario"
+msgstr "Reporte Inventario"
+
+#. module: kardex_nmit
+#: model:ir.actions.act_window,name:kardex_nmit.action_wizards_reports_kardex_month
+#: model:ir.ui.menu,name:kardex_nmit.menu_report_kardex_month_new
+msgid "Reporte Kardex por Fecha"
+msgstr "Reporte Kardex por Fecha"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__sale_order_id
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__transaction_type__sales
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__transaction_type__scrap
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Scrap"
+msgstr "Desecho"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_warehouse_valued_report_view_tree
+msgid "Stock By Warehouse Valued"
+msgstr "Reporte valorizado por almacén"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__inventory_id
+msgid "Stock Inventory"
+msgstr "Inventario"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__move_id
+msgid "Stock Move"
+msgstr "Movimiento de Stock"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__picking_id
+msgid "Stock Picking"
+msgstr "Picking"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__scrap_id
+msgid "Stock Scrap"
+msgstr "Desecho"
+
+#. module: kardex_nmit
+#: model:ir.model,name:kardex_nmit.model_stock_warehouse_valued_report
+msgid "Stock Warehouse Value Report"
+msgstr "Reporte valorizado por almacén"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#, python-format
+msgid "Total Balance"
+msgstr "Saldo Total"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+msgid "Total Cost"
+msgstr "Costo Total"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Transaction"
+msgstr "Transacción"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__transaction_type
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Transaction Type"
+msgstr "Tipo de Transacción"
+
+#. module: kardex_nmit
+#: model:ir.model.fields.selection,name:kardex_nmit.selection__stock_warehouse_valued_report__transaction_type__transfer
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Transfer"
+msgstr "Transferencia"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__uom_id
+msgid "UoM"
+msgstr "UdM"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#, python-format
+msgid "Valuation"
+msgstr "Valoración"
+
+#. module: kardex_nmit
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: kardex_nmit
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_graph
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_pivot
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+msgid "Valued Moves"
+msgstr "Movimientos Valorizados"
+
+#. module: kardex_nmit
+#: model:ir.actions.act_window,name:kardex_nmit.action_stock_warehouse_valued_report_report
+#: model:ir.ui.menu,name:kardex_nmit.menu_action_stock_warehouse_valued_report_report
+msgid "Valued Report by Warehouse"
+msgstr "Reporte valorizado por almacén"
+
+#. module: kardex_nmit
+#: code:addons/kardex_nmit/wizards/report_inventario_month.py:0
+#: code:addons/kardex_nmit/wizards/report_inventory.py:0
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_month_wizard__warehouse_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard__warehouse_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_kardex_wizard_pdf__warehouse_id
+#: model:ir.model.fields,field_description:kardex_nmit.field_stock_warehouse_valued_report__warehouse_id
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.stock_kardex_pdf_report
+#: model_terms:ir.ui.view,arch_db:kardex_nmit.view_stock_warehouse_valued_report_search
+#, python-format
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: kardex_nmit
+#: model:ir.model,name:kardex_nmit.model_stock_kardex_month_wizard
+msgid "stock.kardex.month.wizard"
+msgstr ""
+
+#. module: kardex_nmit
+#: model:ir.model,name:kardex_nmit.model_stock_kardex_wizard
+msgid "stock.kardex.wizard"
+msgstr ""
+
+#. module: kardex_nmit
+#: model:ir.model,name:kardex_nmit.model_stock_report_wizard
+msgid "stock.report.wizard"
+msgstr ""

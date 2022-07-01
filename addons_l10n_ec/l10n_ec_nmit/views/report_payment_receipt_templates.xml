@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_payment_receipt_document_inherit" inherit_id="account.report_payment_receipt_document">
+          
+        <xpath expr="//h3" position="replace">
+            <t t-if="o.payment_type == 'outbound'">
+                <h3><strong>Comprobante de Egreso:   <span t-field="o.name"/></strong></h3>
+            </t>
+            <t t-if="o.payment_type == 'inbound'">
+                <h3><strong>Comprobante de Ingreso:   <span t-field="o.name"/></strong></h3>
+            </t>
+            <br/><br/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('mb-4')]" position="inside">
+            <div class="row">
+                <div class="col-6" t-if="o.bank">
+                    Banco del cheque: <span t-field="o.bank.name"/>
+                    </div>
+                <div class="col-6" t-if="o.check_number or o.number">
+                    No. Cheque: <span t-esc="o.check_number or o.number"/>
+                    </div>
+            </div>
+         </xpath>
+
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <br/><br/><br/>
+            <h5><strong>Asiento Contable:</strong></h5>
+
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th><span>Cuenta</span></th>
+                        <th><span>Etiqueta</span></th>
+                        <th class="text-right"><span>Debito</span></th>
+                        <th class="text-right"><span>Crédito</span></th>
+                    </tr>
+                </thead>
+                <tbody>       
+                    <t t-foreach="o.move_id.line_ids" t-as="line">
+                        <tr>
+                            <td><t t-esc="line.account_id.code"/> <t t-esc="line.account_id.name"/></td>                            
+                            <td><span t-field="line.name"/></td>
+                            <td class="text-right"><span t-field="line.debit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/></td>
+                            <td class="text-right"><span t-field="line.credit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/></td>
+                        </tr>
+                    </t>   
+                </tbody>   
+            </table>
+
+
+            <div class="row" style="text-align: center; position:absolute; top:850px; page-break-inside: avoid;">
+                <div class="col-4">
+                    <hr> </hr>
+                    <span><strong>REALIZADO POR</strong></span>
+                </div>
+                <div class="col-4">
+                    <hr> </hr>
+                    <span><strong>REVISADO POR</strong></span>
+                </div>
+                <div class="col-4">
+                    <hr> </hr>
+                    <span><strong>APROBADO POR</strong></span>
+                </div>
+                <div class="col-4" style="text-align: left;">
+                    <hr> </hr>
+                    <span t-if="o.payment_type == 'outbound'"><center><strong>ENTREGUE CONFORME</strong></center></span>
+                    <span t-if="o.payment_type == 'inbound'"><center><strong>ENTREGADO POR</strong></center></span><br/>
+                    <span><strong>CI:</strong></span>
+                </div>
+            </div>
+
+
+        </xpath>
+    </template>
+
+</odoo>

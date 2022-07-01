@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ec_custom" model="res.partner">
+            <field name="image_1920" type="base64" file="l10n_ec_nmit/static/img/senae.jpeg"/>
+            <field name="name">Servicio Nacional de Aduanas del Ecuador</field>
+            <field name="state_id" ref="base.state_ec_09"/>
+            <field name="website">www.aduana.gob.ec</field>
+            <field name="is_company">1</field>
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc"/>
+            <field name="vat">1760013480001</field>
+        </record>
+    </data>
+</odoo>

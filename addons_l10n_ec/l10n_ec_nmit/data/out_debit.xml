@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+<template id="out_debit">
+<notaDebito id="comprobante" version="1.0.0">
+    <infoTributaria>
+        <ambiente t-esc="i.company_id.l10n_ec_env" />
+        <tipoEmision t-esc="'4'" />
+        <razonSocial t-esc="i.company_id.name" />
+        <nombreComercial t-esc="i.company_id.name" />
+        <ruc t-esc="i.company_id.partner_id.vat" />
+        <claveAcceso t-esc="i.l10n_ec_access_key" />
+        <codDoc t-esc="i.cod_doc" />
+        <estab t-esc="i.journal_id.l10n_ec_entity" />
+        <ptoEmi t-esc="i.journal_id.l10n_ec_emission" />
+        <secuencial t-esc="i.l10n_ec_sequence" />
+        <dirMatriz t-esc="i.company_id.street" />
+    </infoTributaria>
+    <infoNotaDebito>
+        <fechaEmision t-esc="i.invoice_date.strftime('%d/%m/%Y')" />
+        <dirEstablecimiento><t t-esc="dirEstablecimiento" /></dirEstablecimiento>
+        <tipoIdentificacionComprador t-esc="i.l10n_latam_identification_type_name" />
+        <razonSocialComprador t-esc="i.partner_id.l10n_ec_name" />
+        <identificacionComprador t-esc="i.partner_id.vat" />
+        <contribuyenteEspecial><t t-esc="contribuyenteEspecial" /></contribuyenteEspecial>
+        <obligadoContabilidad t t-esc="i.company_id.l10n_ec_accounting" />
+        <codDocModificado t-esc="codDocModificado" />
+        <numDocModificado t-esc="numDocModificado" />
+        <fechaEmisionDocSustento t-esc="fechaEmisionDocSustento" />
+        <totalSinImpuestos  t-esc="i.amount_untaxed" />
+        <impuestos>
+            <impuesto t-foreach="impuestos" t-as="c">
+                <codigo><t t-esc="c['codigo']" /></codigo>
+                <codigoPorcentaje t t-esc="c['codigoPorcentaje']" />
+                <tarifa><t t-esc="c['tarifa']" /></tarifa>
+                <baseImponible t t-esc="c['baseImponible']" />
+                <valor t t-esc="c['valor']" />
+            </impuesto>
+        </impuestos>
+        <valorTotal><t t-esc="valorTotal" /></valorTotal>
+        <pagos>
+            <pago>
+                <formaPago><t t-esc="formaPago" /></formaPago>
+                <total><t t-esc="importeTotal" /></total>
+            </pago>
+        </pagos>
+    </infoNotaDebito>
+    <motivos>
+        <motivo>
+            <razon><t t-esc="motivo" /></razon>
+            <valor><t t-esc="valor" /></valor>
+        </motivo>
+    </motivos>
+</notaDebito>
+
+</template>
+</data>
+</odoo>

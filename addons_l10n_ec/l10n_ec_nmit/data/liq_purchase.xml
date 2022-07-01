@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="liq_purchase">
+    <liquidacionCompra id="comprobante" version="1.1.0">
+      <infoTributaria>
+        <ambiente t-esc="i.company_id.l10n_ec_env" />
+        <tipoEmision t-esc="'1'" />
+        <razonSocial t-esc="i.company_id.name" />
+        <nombreComercial t-esc="i.company_id.name" />
+        <ruc t-esc="i.company_id.partner_id.vat" />
+        <claveAcceso t-esc="i.l10n_ec_access_key" />
+        <codDoc t-esc="i.l10n_ec_cod_doc" />
+        <estab t-esc="i.journal_id.l10n_ec_entity" />
+        <ptoEmi t-esc="i.journal_id.l10n_ec_emission" />
+        <secuencial t-esc="i.l10n_ec_sequence" />
+        <dirMatriz t-esc="i.company_id.partner_id._l10n_ec_direction() or ''" />
+        <agenteRetencion t-if="i.company_id.agent_number" t-esc="i.company_id.agent_number"/>
+        <contribuyenteRimpe t-if="i.company_id.micro_business">CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+      </infoTributaria>
+      <infoLiquidacionCompra>
+        <fechaEmision t-esc="i.invoice_date.strftime('%d/%m/%Y')" />
+        <dirEstablecimiento t-esc="i.journal_id.l10n_ec_emission_address_id._l10n_ec_direction() or ''" />
+        <contribuyenteEspecial t-if="i.company_id.taxpayer_number" t-esc="i.company_id.taxpayer_number"/>
+        <obligadoContabilidad t-esc="i.company_id.l10n_ec_accounting"/>
+        <tipoIdentificacionProveedor t-esc="i.l10n_latam_identification_type_name" /> 
+        <razonSocialProveedor t-esc="i.partner_id.l10n_ec_name" /> 
+        <identificacionProveedor t-esc="i.partner_id.vat" /> 
+        <direccionProveedor t-esc="i.l10n_ec_partner_address" />
+        <totalSinImpuestos  t-esc="i.amount_untaxed" />
+        <totalDescuento t-esc="i.l10n_ec_total_discount" />
+        <codDocReembolso t-esc="'00'"  /> 
+        <!-- <totalComprobantesReembolso t-esc="0.00" />
+        <totalBaseImponibleReembolso t-esc="0.00" />
+        <totalImpuestoReembolso t-esc="0.00" /> -->
+        <totalConImpuestos>
+          <totalImpuesto t-foreach="i.line_ids" t-as="tax"
+              t-if="tax.tax_line_id and 'withhold' not in tax.tax_group_id.l10n_ec_type">
+            <codigo t-esc="tax.l10n_ec_total_taxes('code')" />
+            <codigoPorcentaje
+                    t-esc="tax.l10n_ec_total_taxes('code_porcent')" />
+            <descuentoAdicional t-esc="0.00" />
+            <baseImponible t-esc="tax.l10n_ec_total_taxes('base')" />
+            <tarifa t-esc="tax.l10n_ec_total_taxes('tarifa')" />
+            <valor t-esc="tax.l10n_ec_total_taxes('value')" />
+          </totalImpuesto>
+          </totalConImpuestos>
+        <importeTotal t-esc="'{:.2f}'.format(i.amount_total)" />
+        <moneda t-esc="i.currency_id.l10n_ec_currency or 'DOLAR'"/>        
+        <pagos>
+            <pago>
+                <formaPago t-esc="i.l10n_ec_sri_payment_id.code" />
+                <total t-esc="'{:.2f}'.format(i.amount_total)" />
+                <plazo t-esc="'30'" /> 
+                <!-- <unidadTiempo t-esc="'{:.2f}'.format(i.amount_total)" />  -->
+            </pago>
+        </pagos>
+      </infoLiquidacionCompra>
+      <detalles>
+        <detalle t-foreach="i.invoice_line_ids" t-as="line">
+          <codigoPrincipal t-esc="line.product_id.l10n_ec_code" />
+          <codigoAuxiliar t-esc="line.product_id.l10n_ec_code" /> 
+          <descripcion t-esc="line.product_id.l10n_ec_description" />
+          <!-- <unidadMedida t-esc="line.product_id.l10n_ec_code" />          -->
+          <cantidad t-esc="'{:.6f}'.format(line.quantity)" />
+          <precioUnitario t-esc="'{:.6f}'.format(line.price_unit)" />
+          <descuento t-esc="line.l10n_ec_discount" />
+          <precioTotalSinImpuesto t-esc="'{:.2f}'.format(line.price_subtotal)" />
+          <detallesAdicionales> 
+            <detAdicional nombre="nombre0" valor="valor0"/> 
+            <detAdicional nombre="nombre1" valor="valor1"/> 
+          </detallesAdicionales> 
+          <impuestos t-if="line.l10n_ec_line_taxes">
+            <impuesto t-foreach="line.l10n_ec_line_taxes" t-as="tax">
+              <codigo t-esc="tax('codigo')" />
+              <codigoPorcentaje t-esc="tax('codigoPorcentaje')" />
+              <tarifa t-esc="tax('tarifa')" />
+              <baseImponible t-esc="tax('baseImponible')" />
+              <valor t-esc="tax('valor')" />
+            </impuesto>
+          </impuestos>
+        </detalle>
+      </detalles>
+      <!-- <reembolsos>
+        <reembolsoDetalle t-foreach="i.invoice_line_ids" t-as="line">
+          <tipoIdentificacionProveedorReembolso t-esc="'04'"/>
+          <identificacionProveedorReembolso t-esc="'1760013210001'"/>
+          <codPaisPagoProveedorReembolso t-esc="'593'"/>
+          <tipoProveedorReembolso t-esc="'01'"/>
+          <codDocReembolso t-esc="'01'"/>
+          <estabDocReembolso t-esc="'001'"/>
+          <ptoEmiDocReembolso t-esc="'501'"/>
+          <secuencialDocReembolso t-esc="'000000008'"/>
+          <fechaEmisionDocReembolso t-esc="'04/03/2013'"/>
+          <numeroautorizacionDocReemb t-esc="'0403201301179226110400110015010000000081234567816'"/>
+          <detalleImpuestos>
+            <detalleImpuesto t-foreach="i.invoice_line_ids" t-as="line">
+              <codigo t-esc="'2'"/>
+              <codigoPorcentaje t-esc="'2'"/>
+              <tarifa t-esc="'12'"/>
+              <baseImponibleReembolso t-esc="133.93"/>
+              <impuestoReembolso t-esc="16.07"/>  
+            </detalleImpuesto> 
+          </detalleImpuestos>  
+        </reembolsoDetalle>
+      </reembolsos> -->
+      <infoAdicional> 
+        <campoAdicional nombre="Email" t-esc="i.partner_id.email" />
+        <campoAdicional nombre="Direccion" t-esc="i.partner_id._l10n_ec_direction()" />
+        <campoAdicional nombre="Telefono" t-esc="i.partner_id.phone" />
+        <campoAdicional nombre="Pedido" t-esc="i.invoice_origin" />        
+      </infoAdicional>
+    </liquidacionCompra>
+</template>
+</odoo>

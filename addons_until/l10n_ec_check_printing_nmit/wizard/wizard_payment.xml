@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <record id="l10n_ec_account_payment_register_form" model="ir.ui.view">
+            <field name="name">>l10n_ec.account.payment.register.form</field>
+            <field name="model">account.payment.register</field>
+            <field name="inherit_id" ref="account.view_account_payment_register_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group2']" position="after">
+                    <group position="after">
+                        <separator string="Informacion del Cheque" attrs="{'invisible': [('payment_method_code','not in',['check_printing','batch_payment'])]}"/>
+                        <group col="2" colspan="2" attrs="{'invisible': [('payment_method_code','not in',['check_printing','batch_payment'])]}">
+                            <field name="date_to" attrs="{'required':[('payment_method_code','in',['batch_payment'])], 'invisible':[('payment_method_code','in',['check_printing'])]}"/>
+                            <field name="date_to" string="Fecha de Entrega" attrs="{'required':[('payment_method_code','in',['check_printing'])], 'invisible':[('payment_method_code','in',['batch_payment'])]}"/>
+                            <field name="number" attrs="{'required':[('payment_method_code','in',['batch_payment'])],'invisible': [('payment_method_code','not in',['batch_payment'])]}"/>
+                            <field name="bank" attrs="{'required':[('payment_method_code','in',['check_printing','batch_payment'])]}"/>
+                            <field name="check_type" attrs="{'required':[('payment_method_code','in',['check_printing','batch_payment'])]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

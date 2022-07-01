@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="nmit_pay_residents_action" model="ir.actions.act_window" >
+            <field name="name" >Pay Resident</field>
+            <field name="res_model">l10n.ec.pay.resident</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="nmit_type_foreign_tax_regime_view_action" model="ir.actions.act_window" >
+            <field name="name" >Type Foreign Tax Regime</field>
+            <field name="res_model">l10n.ec.type.foreign.tax.regime</field>
+            <field name="view_mode">tree</field>
+        </record>
+        
+        <record id="nmit_country_payment_regime_view_action" model="ir.actions.act_window" >
+            <field name="name" >Country Payment Regime</field>
+            <field name="res_model">l10n.ec.country.payment.regime</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="nmit_tax_haven_country_view_action" model="ir.actions.act_window" >
+            <field name="name" >Tax Haven Country</field>
+            <field name="res_model">l10n.ec.tax.haven.country</field>
+            <field name="view_mode">tree</field>
+        </record>      
+
+        <menuitem id="nmit_ats_menu" 
+            name="ATS"
+            parent="contacts.res_partner_menu_config" 
+            sequence="11"/>            
+
+        <menuitem id="nmit_pay_residents_menu" 
+            action="nmit_pay_residents_action"
+            parent="nmit_ats_menu" 
+            sequence="12"/>
+
+        <menuitem id="nmit_type_foreign_tax_regime_view_menu" 
+            action="nmit_type_foreign_tax_regime_view_action"
+            parent="nmit_ats_menu" 
+            sequence="13"/>
+
+        <menuitem id="nmit_country_payment_regime_view_menu" 
+            action="nmit_country_payment_regime_view_action"
+            parent="nmit_ats_menu" 
+            sequence="14"/>
+
+        <menuitem id="nmit_tax_haven_country_view_menu" 
+            action="nmit_tax_haven_country_view_action"
+            parent="nmit_ats_menu" 
+            sequence="15"/>            
+            
+</odoo>

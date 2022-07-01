@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="nmit_type_foreign_tax_regime_view" model="ir.ui.view">
+        <field name="name">tipo de  régimen fiscal del exterior</field>
+        <field name="model">l10n.ec.type.foreign.tax.regime</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="Area">
+                <field name="name" required="1"/>
+                <field name="code" required="1"/>
+                <field name="state" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

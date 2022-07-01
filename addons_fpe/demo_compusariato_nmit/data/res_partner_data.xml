@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+ 
+ 
+
+        <record id="IMPORT_0701102048001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0701102048001</field>
+            <field name="name">ROMERO PEDRO</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">SUCRE S/N Y JOSE MARIA OLLAGUE</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_A" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_17" />
+            <field name="city">Quito</field>
+            <field name="email">invalid_promero@newmind-it.com</field>
+            <field name="phone">4578521</field>
+            <field name="mobile">0982123541</field>
+            <field name="agent" eval="True" />
+            <field name="commission_id" ref="demo_compusariato_nmit.demo_commission" />
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Pedro.jpg" />
+        </record>
+
+
+        <record id="IMPORT_0990991774001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0990991774001</field>
+            <field name="name">SIGLO 21 S.A.</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">Cdla. La Garzota Av. Isidro Ayora</field>
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalidsiglo21@invalid.com</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Provee_siglo21.jpg" />
+            <field name="l10n_ec_related_party" eval="False" />
+            <field name="l10n_ec_pay_residents_id" ref="l10n_ec_ats.pay01" />
+            <field name="l10n_ec_double_taxation_applies_id" eval="False" />
+            <field name="l10n_ec_pay_subject_wthlg_id" eval="False" />            
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+
+        <record id="IMPORT_0911389575001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0911389575001</field>
+            <field name="name">CARTIMEX S.A</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">Av de las Americas</field>
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalidcartimex@invalid.com</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/cartimex.jpg" />
+            <field name="l10n_ec_related_party" eval="False" />
+            <field name="l10n_ec_pay_residents_id" ref="l10n_ec_ats.pay01" />
+            <field name="l10n_ec_double_taxation_applies_id" eval="False" />
+            <field name="l10n_ec_pay_subject_wthlg_id" eval="False" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_100232425" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_latam_base.it_vat" />
+            <field name="vat">100232425</field>
+            <field name="name">AMAZON</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_immediate" />
+            <field name="street">Miami 345 street</field>
+            <field name="country_id" ref="base.us" />
+            <field name="city">Miami</field>
+            <field name="email">invalidamazon@invalid.com</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/amazon.png" />
+            <field name="l10n_ec_related_party" eval="False" />
+            <field name="l10n_ec_pay_residents_id" ref="l10n_ec_ats.pay02" />
+            <field name="l10n_ec_country_payment_regime_id" ref="l10n_ec_ats.110" />
+            <field name="l10n_ec_double_taxation_applies_id" eval="True" />
+            <field name="l10n_ec_pay_subject_wthlg_id" eval="False" />
+        </record>
+        <record id="IMPORT_0500643739001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0500643739001</field>
+            <field name="name">AGENTES DE ADUANA S.A.</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_immediate" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">Sauces 5</field>
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalidagentes@invalid.com</field>
+            <field name="l10n_ec_related_party" eval="False" />
+            <field name="l10n_ec_pay_residents_id" ref="l10n_ec_ats.pay01" />
+            <field name="l10n_ec_country_payment_regime_id" ref="l10n_ec_ats.110" />
+            <field name="l10n_ec_double_taxation_applies_id" eval="False" />
+            <field name="l10n_ec_pay_subject_wthlg_id" eval="False" />
+        </record>
+
+
+
+        <record id="IMPORT_0941984643001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0941984643001</field>
+            <field name="name">PÉREZ FREDDIE</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">AV CIRCUNVALACION NORTE S/N Y CATORCEAVA OESTE</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_O" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_fperez@newmind-it.com</field>
+            <field name="phone">8567425</field>
+            <field name="mobile">0994215245</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Freddie.jpg" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0891765568001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0891765568001</field>
+            <field name="name">QUIÑONEZ FRANKLIN</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">AYACUCHO S/N Y ROCAFUERTE</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_N" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_fquinonez1@newmind-it.com</field>
+            <field name="phone">9542875</field>
+            <field name="mobile">0982425122</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Franklin.jpg" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+
+        <record id="IMPORT_0907972517001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0907972517001</field>
+            <field name="name">FERNANDEZ EVELIN</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">SIMON BOLIVAR S/N Y VEINTIDOSAVA OESTE</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_I" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_evelin.fernandez777@gmail.com</field>
+            <field name="phone">3252125</field>
+            <field name="mobile">0987542584</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/foto4.png" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0907440267001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0907440267001</field>
+            <field name="name">MUÑOZ SAMUEL</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">S/N(ISLA EL POLLO)</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_L" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_smunoz@newmind-it.com</field>
+            <field name="phone">7842365</field>
+            <field name="mobile">0975428548</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Samuel.jpg" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0916514060001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0916514060001</field>
+            <field name="name">PÉREZ VERÓNICA</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">LAS LOMAS S/N Y VIA COCHEROS</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_M" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_veronicaperez@outlook.com</field>
+            <field name="phone">7421525</field>
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0990717060" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_dni" />
+            <field name="vat">0990717060</field>
+            <field name="name">GUADAMUD MARIA SOL</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_F" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_masol@gmail.com</field>
+            <field name="phone">2452125</field>
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0916302326" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_dni" />
+            <field name="vat">0916302326</field>
+            <field name="name">MUGUERZA JAVIER</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_P" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_javiermuguerza@abc.com</field>
+            <field name="phone">7894254</field>
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0905300844001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0905300844001</field>
+            <field name="name">ALARCÓN OLIVIA</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">LAS LOMAS S/N Y VIA COCHEROS</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_R" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_veronicaperez@outlook.com</field>
+            <field name="phone">7421525</field>
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+        <record id="IMPORT_0905419198001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0905419198001</field>
+            <field name="name">JARAMILLO ESTEFANO</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="property_account_position_id" ref="l10n_ec.1_fp_special_taxation_companies" />
+            <field name="street">LAS LOMAS S/N Y VIA COCHEROS</field>
+            <field name="property_product_pricelist" ref="product.list0" />
+            <field name="industry_id" ref="base.res_partner_industry_U" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_veronicaperez@outlook.com</field>
+            <field name="phone">7421525</field>
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+
+        <record id="IMPORT_0909479032001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_ruc" />
+            <field name="vat">0909479032001</field>
+            <field name="name">TIGRERO RICHARD</field>
+            <field name="property_payment_term_id" ref="account.account_payment_term_30days" />
+            <field name="street">Florida</field>
+            <field name="street2">MZ 20 V13</field>
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalidrichard@invalid.com</field>
+            <field name="l10n_ec_related_party" eval="False" />
+            <field name="l10n_ec_pay_residents_id" ref="l10n_ec_ats.pay01" />
+            <field name="l10n_ec_double_taxation_applies_id" eval="False" />
+            <field name="l10n_ec_pay_subject_wthlg_id" eval="False" />
+            <field name="is_carrier" eval="True" />
+            <field name="cont_especial" eval="False" />
+            <field name="rise" eval="True" />
+            <field name="agent_ids" search="[('name', 'in', ['ROMERO PEDRO'])]" />
+        </record>
+
+
+        <record id="IMPORT_100001" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100001</field>
+            <field name="name">ZZ Facturación</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid1@gmail.com</field>
+        </record>
+        <record id="IMPORT_100002" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100002</field>
+            <field name="name">ZZ Contabilidad Lectura</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid2@gmail.com</field>
+        </record>
+        <record id="IMPORT_100003" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100003</field>
+            <field name="name">ZZ Contabilidad Completa</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid3@gmail.com</field>
+        </record>
+        <record id="IMPORT_100004" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100004</field>
+            <field name="name">ZZ Administrador de Facturación</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid4@gmail.com</field>
+        </record>
+        <record id="IMPORT_100005" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100005</field>
+            <field name="name">ZZ Compra Usuario</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid5@gmail.com</field>
+        </record>
+        <record id="IMPORT_100006" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100006</field>
+            <field name="name">ZZ Compra Administrador</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid6@gmail.com</field>
+        </record>
+        <record id="IMPORT_100007" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100007</field>
+            <field name="name">ZZ Inventario Usuario</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid7@gmail.com</field>
+        </record>
+        <record id="IMPORT_100008" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100008</field>
+            <field name="name">ZZ Inventario Administrador</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid8@gmail.com</field>
+        </record>
+        <record id="IMPORT_100009" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100009</field>
+            <field name="name">ZZ Ventas Documentos Propios</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid9@gmail.com</field>
+        </record>
+        <record id="IMPORT_100010" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100010</field>
+            <field name="name">ZZ Ventas Documentos Todos</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid10@gmail.com</field>
+        </record>
+        <record id="IMPORT_100011" model="res.partner">
+            <field name="l10n_latam_identification_type_id" ref="l10n_ec.ec_passport" />
+            <field name="vat">100011</field>
+            <field name="name">ZZ Ventas Administrador</field>
+            <field name="property_payment_term_id" ref="" />
+            <field name="country_id" ref="base.ec" />
+            <field name="state_id" ref="base.state_ec_09" />
+            <field name="city">Guayaquil</field>
+            <field name="email">invalid_invalid11@gmail.com</field>
+        </record>
+
+        <record id="USER_IMPORT_0941984643001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0941984643001" />
+            <field name="login">fperez</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0891765568001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0891765568001" />
+            <field name="login">fquinonez</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0701102048001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0701102048001" />
+            <field name="login">promero</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0907972517001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0907972517001" />
+            <field name="login">efernandez</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0907440267001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0907440267001" />
+            <field name="login">smunoz</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0916514060001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0916514060001" />
+            <field name="login">vperez</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0990717060" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0990717060" />
+            <field name="login">mguadamud</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0916302326" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0916302326" />
+            <field name="login">jmuguerza</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0905300844001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0905300844001" />
+            <field name="login">oalarcon</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_0905419198001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_0905419198001" />
+            <field name="login">ejaramillo</field>
+            <field name="password">jQhvY4Yh</field>
+        </record>
+        <record id="USER_IMPORT_100001" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100001" />
+            <field name="login">facturacion</field>
+            <field name="password">facturacion</field>
+            <field name="groups_id" eval="[Command.set([ref('account.group_account_invoice')])]" />
+        </record>
+        <record id="USER_IMPORT_100002" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100002" />
+            <field name="login">contabilidad_lectura</field>
+            <field name="password">contabilidad_lectura</field>
+            <field name="groups_id" eval="[Command.set([ref('account.group_account_readonly')])]" />
+        </record>
+        <record id="USER_IMPORT_100003" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100003" />
+            <field name="login">contabilidad_completa</field>
+            <field name="password">contabilidad_completa</field>
+            <field name="groups_id" eval="[Command.set([ref('account.group_account_user')])]" />
+        </record>
+        <record id="USER_IMPORT_100004" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100004" />
+            <field name="login">administrador_facturacion</field>
+            <field name="password">administrador_facturacion</field>
+            <field name="groups_id" eval="[Command.set([ref('account.group_account_manager')])]" />
+        </record>
+        <record id="USER_IMPORT_100005" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100005" />
+            <field name="login">compra_usuario</field>
+            <field name="password">compra_usuario</field>
+            <field name="groups_id" eval="[Command.set([ref('purchase.group_purchase_user')])]" />
+        </record>
+        <record id="USER_IMPORT_100006" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100006" />
+            <field name="login">compra_administrador</field>
+            <field name="password">compra_administrador</field>
+            <field name="groups_id" eval="[Command.set([ref('purchase.group_purchase_manager')])]" />
+        </record>
+        <record id="USER_IMPORT_100007" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100007" />
+            <field name="login">inventario_usuario</field>
+            <field name="password">inventario_usuario</field>
+            <field name="groups_id" eval="[Command.set([ref('stock.group_stock_user')])]" />
+        </record>
+        <record id="USER_IMPORT_100008" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100008" />
+            <field name="login">inventario_administrador</field>
+            <field name="password">inventario_administrador</field>
+            <field name="groups_id" eval="[Command.set([ref('stock.group_stock_manager')])]" />
+        </record>
+        <record id="USER_IMPORT_100009" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100009" />
+            <field name="login">ventas_doc_propios</field>
+            <field name="password">ventas_doc_propios</field>
+            <field name="groups_id" eval="[Command.set([ref('sales_team.group_sale_salesman')])]" />
+        </record>
+        <record id="USER_IMPORT_100010" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100010" />
+            <field name="login">ventas_documentos_todos</field>
+            <field name="password">ventas_documentos_todos</field>
+            <field name="groups_id" eval="[Command.set([ref('sales_team.group_sale_salesman_all_leads')])]" />
+        </record>
+        <record id="USER_IMPORT_100011" model="res.users">
+            <field name="partner_id" ref="demo_compusariato_nmit.IMPORT_100011" />
+            <field name="login">ventas_administador</field>
+            <field name="password">ventas_administador</field>
+            <field name="groups_id" eval="[Command.set([ref('sales_team.group_sale_manager')])]" />
+        </record>
+
+ 
+
+    </data>
+</odoo>

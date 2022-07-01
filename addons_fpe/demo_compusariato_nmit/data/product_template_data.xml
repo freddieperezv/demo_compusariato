@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- CATEGORIA DE PRODUCTOS  -->
+        <record id="IMPORT_CAT_1" model="product.category">
+            <field name="name">Productos Core</field>
+            <field name="parent_id" ref="product.product_category_all" />
+            <field name="property_cost_method">average</field>
+            <field name="property_valuation">real_time</field>
+            <field name="property_account_income_categ_id" ref="demo_compusariato_nmit.nmit_ec410103" />
+            <field name="property_account_expense_categ_id" ref="demo_compusariato_nmit.nmit_ec210201" />
+            <field name="property_stock_valuation_account_id" ref="l10n_ec.1_ec110306" />
+            <field name="property_stock_account_input_categ_id" ref="demo_compusariato_nmit.nmit_ec210201" />
+            <field name="property_stock_account_output_categ_id" ref="demo_compusariato_nmit.nmit_ec510113" />
+        </record>
+
+        <record id="IMPORT_CAT_5" model="product.category">
+            <field name="name">Costos de Importación de Productos</field>
+            <field name="parent_id" ref="product.product_category_all" />
+            <field name="property_cost_method">standard</field>
+            <field name="property_valuation">manual_periodic</field>
+            <field name="property_account_income_categ_id" ref="" />
+            <field name="property_account_expense_categ_id" ref="l10n_ec.1_ec110307" />
+            <field name="property_stock_valuation_account_id" ref="" />
+            <field name="property_stock_journal" ref="" />
+            <field name="property_stock_account_input_categ_id" ref="" />
+            <field name="property_stock_account_output_categ_id" ref="" />
+        </record>             
+
+        <record id="IMPORT_CAT_6" model="product.category">
+            <field name="name">Vehículo</field>
+            <field name="parent_id" ref="product.product_category_all" />
+            <field name="property_cost_method">standard</field>
+            <field name="property_valuation">manual_periodic</field>
+            <field name="property_account_income_categ_id" ref="demo_compusariato_nmit.nmit_ec410103" />
+            <field name="property_account_expense_categ_id" ref="l10n_ec.1_ec120109" />
+            <field name="property_stock_valuation_account_id" ref="" />
+            <field name="property_stock_journal" ref="" />
+            <field name="property_stock_account_input_categ_id" ref="" />
+            <field name="property_stock_account_output_categ_id" ref="" />
+        </record>        
+
+        <!-- PRODUCTOS  -->
+
+        <record id="IMPORT_1" model="product.template">
+            <field name="name">ASUS TUF Z370-PRO GAMING LGA1151 DDR4 HDMI DVI M.2 Z370 ATX Motherboard with Gigabit LAN and USB 3.1</field>
+            <field name="default_code">ASUSMB001</field>
+            <field name="barcode">34332422</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">210</field>
+            <field name="standard_price">150</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 1</field>
+            <field name="description_sale">Descripción de ventas 1</field>
+            <field name="description_purchase">Descripcion de compra 1</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.6</field>
+            <field name="volume">0.2</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 1</field>
+            <field name="description_pickingin">Descripción para recepciones 1</field>
+            <field name="description_picking">Descripción para transferencia interna 1</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/asus_tuf.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_2" model="product.template">
+            <field name="name">Cooler Master Hyper 612 Ver.2 - Silent CPU Air Cooler with 6 Direct Contact Heatpipes and Folding Fin Structure RR-H6V2-13PK-R1</field>
+            <field name="default_code">COO01</field>
+            <field name="barcode">23423441</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">60.5</field>
+            <field name="standard_price">40</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 2</field>
+            <field name="description_sale">Descripción de ventas 2</field>
+            <field name="description_purchase">Descripcion de compra 2</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.55</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 2</field>
+            <field name="description_pickingin">Descripción para recepciones 2</field>
+            <field name="description_picking">Descripción para transferencia interna 2</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/cooler.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_3" model="product.template">
+            <field name="name">G.SKILL TridentZ RGB Series 16GB (2 x 8GB) 288-Pin DDR4 3000MHz (PC4 24000) Desktop Memory Model F4-3000C16D-16GTZR</field>
+            <field name="default_code">GSK0125</field>
+            <field name="barcode">5678556</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">130.2</field>
+            <field name="standard_price">110</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 3</field>
+            <field name="description_sale">Descripción de ventas 3</field>
+            <field name="description_purchase">Descripcion de compra 3</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.1</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 3</field>
+            <field name="description_pickingin">Descripción para recepciones 3</field>
+            <field name="description_picking">Descripción para transferencia interna 3</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/GSKILL_TridentZ_RGB_Series_16GB.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_4" model="product.template">
+            <field name="name">EVGA SuperNOVA 650 G2, 80+ GOLD 650W, Fully Modular, EVGA ECO Mode, 7 Year Warranty, Includes FREE Power On Self Tester Power Supply 220-G2-0650-Y1</field>
+            <field name="default_code">FNT452</field>
+            <field name="barcode">454542</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">150.9</field>
+            <field name="standard_price">100</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 4</field>
+            <field name="description_sale">Descripción de ventas 4</field>
+            <field name="description_purchase">Descripcion de compra 4</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.9</field>
+            <field name="volume">0.2</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 4</field>
+            <field name="description_pickingin">Descripción para recepciones 4</field>
+            <field name="description_picking">Descripción para transferencia interna 4</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/VGA_SuperNOVA_650_G2.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_5" model="product.template">
+            <field name="name">ARCTIC MX-4 Thermal Compound Paste, Carbon Based High Performance, Heatsink Paste, Thermal Compound CPU for All Coolers, Thermal Interface Material -4 Grams</field>
+            <field name="default_code">PST125</field>
+            <field name="barcode">45584245</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">5.2</field>
+            <field name="standard_price">3</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 5</field>
+            <field name="description_sale">Descripción de ventas 5</field>
+            <field name="description_purchase">Descripcion de compra 5</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.03</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 5</field>
+            <field name="description_pickingin">Descripción para recepciones 5</field>
+            <field name="description_picking">Descripción para transferencia interna 5</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/ARTIC_MX.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_6" model="product.template">
+            <field name="name">Enermax PWM Series T.B. Silence 120mm Ultra Quiet Twister Bearing Cooling Case Fan, Black UCTB12P</field>
+            <field name="default_code">VENT01</field>
+            <field name="barcode">42454245</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">12</field>
+            <field name="standard_price">6</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 6</field>
+            <field name="description_sale">Descripción de ventas 6</field>
+            <field name="description_purchase">Descripcion de compra 6</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.1</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 6</field>
+            <field name="description_pickingin">Descripción para recepciones 6</field>
+            <field name="description_picking">Descripción para transferencia interna 6</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Enermax_PWM_Series.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_7" model="product.template">
+            <field name="name">Seagate 2TB BarraCuda SATA 6 Gb/s 7200 RPM 64MB Cache 3.5 Inch Desktop Hard Drive (ST2000DM006)</field>
+            <field name="default_code">DIS782</field>
+            <field name="barcode">45248254</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">80.2</field>
+            <field name="standard_price">60</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 7</field>
+            <field name="description_sale">Descripción de ventas 7</field>
+            <field name="description_purchase">Descripcion de compra 7</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.2</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 7</field>
+            <field name="description_pickingin">Descripción para recepciones 7</field>
+            <field name="description_picking">Descripción para transferencia interna 7</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Seagate_2TB BarraCuda.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_8" model="product.template">
+            <field name="name">Intel Core i5-8600K Desktop Processor 6 Cores up to 4.3GHz Turbo Unlocked</field>
+            <field name="default_code">I58600K</field>
+            <field name="barcode">48242848</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">190</field>
+            <field name="standard_price">150</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 8</field>
+            <field name="description_sale">Descripción de ventas 8</field>
+            <field name="description_purchase">Descripcion de compra 8</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.2</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 8</field>
+            <field name="description_pickingin">Descripción para recepciones 8</field>
+            <field name="description_picking">Descripción para transferencia interna 8</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/I5.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_9" model="product.template">
+            <field name="name">Samsung 970 EVO 500GB - NVMe PCIe M.2 2280 SSD (MZ-V7E500BW)</field>
+            <field name="default_code">SSD785</field>
+            <field name="barcode">248452482</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">130</field>
+            <field name="standard_price">100</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 9</field>
+            <field name="description_sale">Descripción de ventas 9</field>
+            <field name="description_purchase">Descripcion de compra 9</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.2</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 9</field>
+            <field name="description_pickingin">Descripción para recepciones 9</field>
+            <field name="description_picking">Descripción para transferencia interna 9</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/970_evo.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_10" model="product.template">
+            <field name="name">Corsair Vengeance RGB PRO 16GB (2x8GB) DDR4 3000MHz C15 LED Desktop Memory - White</field>
+            <field name="default_code">MEM8965</field>
+            <field name="barcode">248545284</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">120</field>
+            <field name="standard_price">89</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 10</field>
+            <field name="description_sale">Descripción de ventas 10</field>
+            <field name="description_purchase">Descripcion de compra 10</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.1</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 10</field>
+            <field name="description_pickingin">Descripción para recepciones 10</field>
+            <field name="description_picking">Descripción para transferencia interna 10</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/Corsair_Vengeance_RGB_PRO_16GB.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_11" model="product.template">
+            <field name="name">Intel Core i7-8700K Desktop Processor 6 Cores up to 4.7GHz Turbo Unlocked LGA1151 300 Series 95W BX80684i78700K</field>
+            <field name="default_code">I78700K</field>
+            <field name="barcode">242544284</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">250</field>
+            <field name="standard_price">200</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 11</field>
+            <field name="description_sale">Descripción de ventas 11</field>
+            <field name="description_purchase">Descripcion de compra 11</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">0.2</field>
+            <field name="volume">0.05</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 11</field>
+            <field name="description_pickingin">Descripción para recepciones 11</field>
+            <field name="description_picking">Descripción para transferencia interna 11</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/I7-8700K.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_12" model="product.template">
+            <field name="name">ASUS VG248QE 24" Full HD 1920x1080 144Hz 1ms HDMI Gaming Monitor</field>
+            <field name="default_code">MON785</field>
+            <field name="barcode">424578624</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">220</field>
+            <field name="standard_price">210</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 12</field>
+            <field name="description_sale">Descripción de ventas 12</field>
+            <field name="description_purchase">Descripcion de compra 12</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">5.89</field>
+            <field name="volume">1</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 12</field>
+            <field name="description_pickingin">Descripción para recepciones 12</field>
+            <field name="description_picking">Descripción para transferencia interna 12</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/ASUS_VG248QE_24.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_13" model="product.template">
+            <field name="name">PC GAMER XTRATECH</field>
+            <field name="default_code">PCGAMER</field>
+            <field name="barcode">2458288699</field>
+            <field name="detailed_type">product</field>
+            <field name="purchase_ok" eval="False" />
+            <field name="sale_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">2500</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_1" />
+            <field name="property_account_expense_id"></field>
+            <field name="description">Nota intena 13</field>
+            <field name="description_sale">Descripción de ventas 13</field>
+            <field name="description_purchase">Descripcion de compra 13</field>
+            <field name="purchase_method">receive</field>
+            <field name="invoice_policy">order</field>
+            <field name="sale_delay">1</field>
+            <field name="produce_delay">3</field>
+            <field name="tracking">lot</field>
+            <field name="weight">10</field>
+            <field name="volume">1</field>
+            <field name="description_pickingout">Descripción para pedidos de entrega 13</field>
+            <field name="description_pickingin">Descripción para recepciones 13</field>
+            <field name="description_picking">Descripción para transferencia interna 13</field>
+            <field name="image_1920" type="base64" file="demo_compusariato_nmit/static/img/pc_gamer.jpg" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_14" model="product.template">
+            <field name="name">Flete Marítimo</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 14</field>
+            <field name="description_purchase">Descripcion de compra 14</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_16" model="product.template">
+            <field name="name">Gastos de almacenaje</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 15</field>
+            <field name="description_purchase">Descripcion de compra 16</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_17" model="product.template">
+            <field name="name">Gasto locales (Navieras y Otros)</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 16</field>
+            <field name="description_purchase">Descripcion de compra 17</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_18" model="product.template">
+            <field name="name">Liquidación impuesto SENAE</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 17</field>
+            <field name="description_purchase">Descripcion de compra 18</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_19" model="product.template">
+            <field name="name">Multas y demorajes</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 18</field>
+            <field name="description_purchase">Descripcion de compra 19</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_20" model="product.template">
+            <field name="name">Seguro de importación</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 19</field>
+            <field name="description_purchase">Descripcion de compra 20</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_21" model="product.template">
+            <field name="name">Servicios complementarios por gestión aduanera (Transporte)</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 20</field>
+            <field name="description_purchase">Descripcion de compra 21</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_22" model="product.template">
+            <field name="name">Servicio de gestion aduaera (Agente despachador)</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 21</field>
+            <field name="description_purchase">Descripcion de compra 22</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_23" model="product.template">
+            <field name="name">Servicio de envío de carga</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_5" />
+            <field name="property_account_expense_id" ref="l10n_ec.ec110307" />
+            <field name="description">Nota intena 22</field>
+            <field name="description_purchase">Descripcion de compra 23</field>
+            <field name="landed_cost_ok">true</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_30" model="product.template">
+            <field name="name">Pago de comisión de venta</field>
+            <field name="default_code">COMI001</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="property_account_expense_id" ref="l10n_ec.1_ec52040201" />
+            <field name="description">Nota intena 23</field>
+            <field name="description_purchase">Descripcion de compra 24</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <record id="IMPORT_31" model="product.template">
+            <field name="name">Vehículo</field>
+            <field name="default_code">VH1524</field>
+            <field name="detailed_type">consu</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="sale_ok" eval="False" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="categ_id" ref="IMPORT_CAT_6" />
+            <field name="property_account_expense_id" ref="l10n_ec.1_ec120109" />
+            <field name="description">Nota intena 24</field>
+            <field name="description_purchase">Descripcion de compra 25</field>
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+
+
+        <record id="IMPORT_40" model="product.template">
+            <field name="name">Papelería</field>
+            <field name="default_code">PAL</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="property_account_expense_id" ref="demo_compusariato_nmit.nmit_ec52020408" />
+            <field name="purchase_method">purchase</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+
+        <record id="IMPORT_41" model="product.template">
+            <field name="name">Capacitaciones</field>
+            <field name="default_code">CAP</field>
+            <field name="detailed_type">service</field>
+            <field name="purchase_ok" eval="True" />
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="list_price">0</field>
+            <field name="standard_price">0</field>
+            <field name="property_account_expense_id" ref="l10n_ec.ec52020402" />
+            <field name="taxes_id" search="[('type_tax_use', '=', 'sale'), ('name', 'in', ['Iva 12%','1% retenciones de la fuente'])]" />
+            <field name="supplier_taxes_id" search="[('type_tax_use', '=', 'purchase'), ('name', 'in', ['Iva 12%', '312 1.75% transferencia de bienes muebles de naturaleza corporal'])]" />
+        </record>
+        <!--
+        Resource: product.supplierinfo
+        -->
+        <record id="IMPORT_supplierinfo_1" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_1" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">120</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_2" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_1" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">125</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_3" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_1" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">120</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_4" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_2" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">20</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_5" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_2" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">25</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_6" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_2" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">20</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_7" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_3" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">90</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_8" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_3" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">100</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_9" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_3" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">110</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_10" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_4" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">50</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_11" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_4" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">55</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_12" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_4" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">50</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_13" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_5" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">5</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_14" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_5" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">4</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_15" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_5" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">5</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_16" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_6" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">10</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_17" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_6" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">11</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_18" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_6" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">9</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_19" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_7" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">42</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_20" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_7" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">40</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_21" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_7" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">42</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_22" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_8" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">150</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_23" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_8" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">140</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_24" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_8" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">130</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_25" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_9" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">100</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_26" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_9" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">110</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_27" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_9" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">90</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_28" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_10" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">80</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_29" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_10" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">70</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_30" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_10" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">60</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_31" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_11" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">200</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_32" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_11" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">220</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_33" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_11" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">200</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_34" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_12" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0990991774001" />
+            <field name="min_qty">0</field>
+            <field name="price">200</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_35" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_12" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_0911389575001" />
+            <field name="min_qty">0</field>
+            <field name="price">190</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+        <record id="IMPORT_supplierinfo_36" model="product.supplierinfo">
+            <field name="product_tmpl_id" ref="demo_compusariato_nmit.IMPORT_12" />
+            <field name="name" ref="demo_compusariato_nmit.IMPORT_100232425" />
+            <field name="min_qty">0</field>
+            <field name="price">150</field>
+            <field name="delay">1</field>
+            <field name="currency_id" ref="base.USD" />
+        </record>
+
+
+
+    </data>
+</odoo>    

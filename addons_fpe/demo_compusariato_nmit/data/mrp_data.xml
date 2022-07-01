@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Productos -->
+        <!-- Centros de trabajo -->
+        <record id="mrp_workcenter_1" model="mrp.workcenter">
+            <field name="name">LINEA DE ENSABLE 1</field>
+            <field name="resource_calendar_id" ref="resource.resource_calendar_std" />
+            <field name="sequence">10</field>
+            <field name="time_efficiency">100</field>
+            <field name="capacity">1</field>
+            <field name="oee_target">90</field>
+            <field name="costs_hour">100</field>
+        </record>
+        <record id="mrp_workcenter_2" model="mrp.workcenter">
+            <field name="name">INSTALACIÓN SOFTWARE</field>
+            <field name="resource_calendar_id" ref="resource.resource_calendar_std" />
+            <field name="sequence">20</field>
+            <field name="time_efficiency">100</field>
+            <field name="capacity">1</field>
+            <field name="oee_target">90</field>
+            <field name="costs_hour">50</field>
+        </record>
+        <record id="mrp_workcenter_3" model="mrp.workcenter">
+            <field name="name">TESTEO</field>
+            <field name="resource_calendar_id" ref="resource.resource_calendar_std" />
+            <field name="sequence">20</field>
+            <field name="time_efficiency">100</field>
+            <field name="capacity">1</field>
+            <field name="oee_target">90</field>
+            <field name="costs_hour">60</field>
+        </record>
+
+            <!-- Lista de materiales, Producto a fabricar -->
+        <record id="mrp_bom_pc_escritorio_1" model="mrp.bom">
+            <field name="code">PCX1</field>
+            <field name="product_tmpl_id" ref="IMPORT_13" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="type">normal</field>
+        </record>
+        <record id="mrp_bom_pc_escritorio_2" model="mrp.bom">
+            <field name="code">PCX2</field>
+            <field name="product_tmpl_id" ref="IMPORT_13" />
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+            <field name="type">normal</field>
+        </record>
+
+
+            <!-- Lineas de la lista de materiales -->
+        <record id="mrp_bom_pc_escritorio_1_line_1" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_2" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_2" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_3" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_3" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_4" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_4" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_5" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_5" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_6" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_6" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_7" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_7" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_8" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_8" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_9" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_9" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_1_line_10" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="product_id" ref="IMPORT_10" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_2_line_1" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_2" />
+            <field name="product_id" ref="IMPORT_1" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_2_line_2" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_2" />
+            <field name="product_id" ref="IMPORT_2" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>
+        <record id="mrp_bom_pc_escritorio_2_line_3" model="mrp.bom.line">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_2" />
+            <field name="product_id" ref="IMPORT_3" />
+            <field name="product_qty">1</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit" />
+        </record>        
+
+            <!-- Operaciones -->
+
+        <record id="mrp_operation_workcenter_1" model="mrp.routing.workcenter">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="name">Proceso de Ensamble</field>
+            <field name="time_mode">auto</field>
+            <field name="time_mode_batch">10</field>
+            <field name="time_cycle_manual">60</field>
+            <field name="worksheet_type">pdf</field>
+            <field name="worksheet" type="base64" file="demo_compusariato_nmit/static/img/Ensamble_de_un_computador.pdf" />
+        </record>
+        <record id="mrp_operation_workcenter_2" model="mrp.routing.workcenter">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="workcenter_id" ref="mrp_workcenter_2" />
+            <field name="name">Software</field>
+            <field name="time_mode">auto</field>
+            <field name="time_mode_batch">10</field>
+            <field name="time_cycle_manual">60</field>
+        </record>
+        <record id="mrp_operation_workcenter_3" model="mrp.routing.workcenter">
+            <field name="bom_id" ref="mrp_bom_pc_escritorio_1" />
+            <field name="workcenter_id" ref="mrp_workcenter_3" />
+            <field name="name">Pruebas de Rendimiento</field>
+            <field name="time_mode">auto</field>
+            <field name="time_mode_batch">10</field>
+            <field name="time_cycle_manual">60</field>
+        </record>
+
+                  
+    </data>
+</odoo>    

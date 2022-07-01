@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="batch_move_edi_web_service_view_form" model="ir.ui.view">
+        <field name="name">batch.move.edi.web.service.view.form</field>
+        <field name="model">batch.move.edi.web.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date" />
+                    </group>    
+                </group>
+                <group string="Documents" >
+                    <field name="document_ids" nolabel="1">
+                        <tree decoration-danger="edi_blocking_level == 'error'"  decoration-info="edi_blocking_level == 'info'" decoration-warning="edi_blocking_level == 'warning'">
+                            <field name="name" />
+                            <field name="edi_blocking_level" invisible="1" />
+                            <field name="edi_state" />
+                            <field name="edi_error_message" />
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button string="Process" name="action_process_edi_web_services" type="object" default_focus="1" class="btn-primary" data-hotkey="p"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+            
+        </field>
+    </record>
+    <record id="batch_move_edi_web_service_action" model="ir.actions.act_window">
+        <field name="name">Batch Electronic Documents Rquest</field>
+        <field name="res_model">batch.move.edi.web.service</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem name="Electronic Move Rquests" id="batch_move_edi_web_service_menu"
+              parent="account.menu_finance_receivables"
+              action="batch_move_edi_web_service_action"/>
+    <record id="batch_wh_edi_web_service_action" model="ir.actions.act_window">
+        <field name="name">Batch Electronic Documents Rquest</field>
+        <field name="res_model">batch.wh.edi.web.service</field>
+        <field name="view_id" ref="batch_move_edi_web_service_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem name="Electronic WH Rquests" id="batch_wh_edi_web_service_menu"
+              parent="account.menu_finance_receivables"
+              action="batch_wh_edi_web_service_action"/>
+</odoo>

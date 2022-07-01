@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="null_ats_template">
+        <anulados>
+            <detalleAnulados t-foreach="docs" t-as="doc">
+                <tipoComprobante t-esc="doc.partner_id._l10n_ec_type_doc" />
+                <establecimiento t-esc="doc.journal_id.l10n_ec_entity" />
+                <puntoEmision t-esc="doc.journal_id.l10n_ec_emission" />
+<!--            <secuencialInicio>{{anulado.secuencialInicio}}</secuencialInicio>-->
+<!--            <secuencialFin>{{anulado.secuencialFin}}</secuencialFin>-->
+                <autorizacion t-esc="doc.l10n_ec_access_key" />
+            </detalleAnulados>
+        </anulados>
+    </template>
+    <template id="sale_ats_template">
+        <ventas>
+            <t t-set="num_doc" t-value="ats.set_counter()"/>            
+            <detalleVentas t-foreach="docs" t-as="doc">
+                <t t-value='doc._taxes_by_group()' t-set='taxes_by_group' />
+                <t t-value='doc._gt_wh_values()' t-set='wh_values' />
+                <tpIdCliente t-esc="doc.partner_id._l10n_ec_tp_id_prov" />
+                <idCliente t-esc="doc.partner_id.vat" />
+                <parteRelVtas>NO</parteRelVtas>
+                <tipoComprobante t-esc="doc.partner_id._l10n_ec_type_doc" />
+                <t t-set="sale_number" t-value="ats._next(num_doc)"/>
+                <numeroComprobantes t-esc="sale_number" />
+                <baseNoGraIva t-esc="taxes_by_group('not_charged_vat')" />
+                <baseImponible t-esc="taxes_by_group('zero_vat_base')" />
+                <baseImpGrav t-esc="taxes_by_group('vat12_base')" />
+                <montoIva t-esc="taxes_by_group('vat12_amount')"/>
+                <montoIce t-esc="taxes_by_group('ice_base')" />
+                <valorRetIva t-esc="wh_values('withhold_vat_amount')" />
+                <valorRetRenta t-esc="wh_values('withhold_income_tax_amount')" />
+                <formasDePago>
+                    <formaPago t-esc="doc.l10n_ec_sri_payment_id.name" />
+                </formasDePago>
+            </detalleVentas>
+        </ventas>
+        <ventasEstablecimiento>
+            <ventaEst>
+                <codEstab t-esc="ats.journal_id.l10n_ec_entity" />
+                <ventasEstab t-esc="sale_number or 0.00" />
+                <ivaComp>0.00</ivaComp>
+            </ventaEst>
+        </ventasEstablecimiento>
+    </template>
+    <template id="purchase_ats_template">
+        <compras>
+            <detalleCompras t-foreach="docs" t-as="doc">
+                <t t-value='doc._taxes_by_group()' t-set='taxes_by_group' />
+                <t t-value='doc._gt_wh_values(purchase_type=True)' t-set='wh_values' />
+                <codSustento t-esc="doc.tax_support_mapping_id.tax_support_id.code"/>
+                <tpIdProv t-esc="doc.partner_id._l10n_ec_tp_id_prov" />
+                <idProv t-esc="doc.partner_id.vat"/>
+                <tipoComprobante t-esc="doc.l10n_latam_document_type_id.code" />
+                <parteRel t-esc="doc.partner_id.l10n_ec_related_party" />
+                <fechaRegistro t-esc="doc.invoice_date.strftime('%d/%m/%Y')" />
+                <establecimiento t-esc="doc._l10n_ec_ats_get_document(0)" />
+                <puntoEmision t-esc="doc._l10n_ec_ats_get_document(1)" />
+                <secuencial t-esc="doc._l10n_ec_ats_get_document(2).replace('0','')" />
+                <fechaEmision t-esc="doc.invoice_date.strftime('%d/%m/%Y')" />
+                <autorizacion t-esc="doc.l10n_ec_auth_number_vendor" />
+                <baseNoGraIva t-esc="taxes_by_group('not_charged_vat')" />
+                <baseImponible t-esc="taxes_by_group('zero_vat_base')" />
+                <baseImpGrav t-esc="taxes_by_group('vat12_base')" />
+                <baseImpExe t-esc="taxes_by_group('exempt_vat_base')" />
+                <montoIce t-esc="taxes_by_group('ice_base')" />
+                <montoIva t-esc="taxes_by_group('vat12_amount')"/>
+                <valRetBien10 t-esc="wh_values('withhold_vat10_amount')"/>
+                <valRetServ20 t-esc="wh_values('withhold_vat20_amount')"/>
+                <valorRetBienes t-esc="wh_values('withhold_vat30_amount')"/>
+                <valRetServ50 t-esc="wh_values('withhold_vat50_amount')"/>
+                <valorRetServicios t-esc="wh_values('withhold_vat70_amount')"/>
+                <valRetServ100 t-esc="wh_values('withhold_vat100_amount')"/>
+                <t t-value='doc._gt_wh_values()' t-set='nc_wh_values' />
+                <valorRetencionNc t-esc="nc_wh_values('withhold_vat_amount')"/>
+                <totbasesImpReemb t-esc="nc_wh_values('withhold_vat_base')"/>
+
+                <pagoExterior t-if="doc.partner_id.l10n_ec_pay_residents_id.code == '01'"> <!-- 01 = Pago a residente / Establecimiento permanente     02 = Pago a no residente  -->
+                    <pagoLocExt t-esc="doc.partner_id.l10n_ec_pay_residents_id.code" />
+                    <paisEfecPago>NA</paisEfecPago>
+                    <aplicConvDobTrib>NA</aplicConvDobTrib>
+                    <pagExtSujRetNorLeg>NA</pagExtSujRetNorLeg>
+                </pagoExterior>
+                <pagoExterior t-if="doc.partner_id.l10n_ec_pay_residents_id.code == '02' and doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code == '01' ">
+                    <pagoLocExt t-esc="doc.partner_id.l10n_ec_pay_residents_id.code" />
+                    <tipoRegi t-esc="doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code" />  <!-- 01=Régimen general   02=Paraíso fiscal  03=Régimen fiscal preferente o jurisdicción de menor imposición -->
+                    <paisEfecPagoGen t-esc="doc.partner_id.l10n_ec_country_payment_regime_id.code" />
+                    <paisEfecPago t-esc="doc.partner_id.l10n_ec_country_payment_regime_id.code" />
+                    <aplicConvDobTrib t-esc="doc.partner_id.l10n_ec_double_taxation_applies_id and 'SI' or 'NO' "   />
+                    <pagExtSujRetNorLeg t-if="doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="'NA'"/> 
+                    <pagExtSujRetNorLeg t-if="not doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="doc.partner_id.l10n_ec_pay_subject_wthlg_id and 'SI' or 'NO'" /> 
+                </pagoExterior>            
+                <pagoExterior t-if="doc.partner_id.l10n_ec_pay_residents_id.code == '02' and doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code == '02' ">
+                    <pagoLocExt t-esc="doc.partner_id.l10n_ec_pay_residents_id.code" />
+                    <tipoRegi t-esc="doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code" />
+                    <paisEfecPagoParFis t-esc="doc.partner_id.l10n_ec_tax_haven_country_id.code" />
+                    <paisEfecPago t-esc="doc.partner_id.l10n_ec_tax_haven_country_id.code2" />
+                    <aplicConvDobTrib t-esc="doc.partner_id.l10n_ec_double_taxation_applies_id and 'SI' or 'NO' "   />
+                    <pagExtSujRetNorLeg t-if="doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="'NA'"/> 
+                    <pagExtSujRetNorLeg t-if="not doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="doc.partner_id.l10n_ec_pay_subject_wthlg_id and 'SI' or 'NO'" />              
+                </pagoExterior>   
+                <pagoExterior t-if="doc.partner_id.l10n_ec_pay_residents_id.code == '02' and doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code == '03' ">      
+                    <pagoLocExt t-esc="doc.partner_id.l10n_ec_pay_residents_id.code" />
+                    <tipoRegi t-esc="doc.partner_id.l10n_ec_type_foreign_tax_regime_id.code" />              
+                    <denopagoRegFis t-esc="doc.partner_id.l10n_ec_name_preferential_tax_regime_id"/>
+                    <paisEfecPago t-esc="doc.partner_id.l10n_ec_country_payment_regime_id.code" />
+                    <aplicConvDobTrib t-esc="doc.partner_id.l10n_ec_double_taxation_applies_id and 'SI' or 'NO' "   />
+                    <pagExtSujRetNorLeg t-if="doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="'NA'"/> 
+                    <pagExtSujRetNorLeg t-if="not doc.partner_id.l10n_ec_double_taxation_applies_id" t-esc="doc.partner_id.l10n_ec_pay_subject_wthlg_id and 'SI' or 'NO'" />              
+                </pagoExterior>   
+                <formasDePago>
+                    <formaPago t-esc="doc.l10n_ec_sri_payment_id" />
+                </formasDePago>
+                <t t-value='doc._get_wh()' t-set='wh' />
+                <air t-if='wh'>    
+                    <detalleAir t-foreach='wh.tax_line_ids' t-as='line'>
+                        <codRetAir t-field='line.tax_id.l10n_ec_code_ats' />
+                        <baseImpAir t-field='line.base' />
+                        <porcentajeAir t-field='line.tax_id.amount' />
+                        <valRetAir t-field='line.amount' />
+                    </detalleAir>
+                </air>
+                <estabRetencion1 t-esc="wh.journal_id.l10n_ec_entity" />
+                <ptoEmiRetencion1 t-esc="wh.journal_id.l10n_ec_emission" />
+                <secRetencion1 t-esc="wh.l10n_latam_document_number" />
+                <!-- <autRetencion1 >{{ compra.autRetencion1 }}</autRetencion1> -->
+                <fechaEmiRet1 t-esc="wh.date" />
+                <reembolsos t-if="doc.reversal_move_id">
+                    <reembolso foreach='doc.reversal_move_id' t-as='reversal_move_id' >
+                        <tipoComprobanteReemb t-esc="reversal_move_id.l10n_latam_document_type_id.code" />
+                        <tpIdProvReemb t-esc="reversal_move_id.partner_id._l10n_ec_tp_id_prov" />
+                        <idProvReemb t-esc="reversal_move_id.partner_id.vat" />
+                        <establecimientoReemb t-esc="reversal_move_id.journal_id.l10n_ec_entity" />
+                        <puntoEmisionReemb t-esc="reversal_move_id.journal_id.l10n_ec_emission" />
+                        <secuencialReemb t-esc="wh.l10n_latam_document_number" />
+                        <fechaEmisionReemb t-esc="reversal_move_id.invoice_date.strftime('%d/%m/%Y')" />
+                        <autorizacionReemb t-esc="reversal_move_id.l10n_ec_auth_number_vendor" />
+                        <t t-value='reversal_move_id._taxes_by_group()' t-set='credit_taxes_by_group' />
+                        <baseImponibleReemb t-esc="credit_taxes_by_group('zero_vat_base')" />
+                        <baseImpGravReemb t-esc="credit_taxes_by_group('vat12_base')" />
+                        <baseNoGraIvaReemb t-esc="credit_taxes_by_group('not_charged_vat')" />
+                        <baseImpExeReemb t-esc="credit_taxes_by_group('exempt_vat')" />
+                        <montoIceRemb t-esc="credit_taxes_by_group('ice_base')" />
+                        <montoIvaRemb t-esc="credit_taxes_by_group('vat12_amount')"/>
+                    </reembolso>
+                </reembolsos>
+            </detalleCompras>
+        </compras>
+    </template>
+    <template id="ats_template">
+        <iva>
+            <TipoIDInformante>R</TipoIDInformante>
+            <IdInformante t-esc="ats.company_id.vat" />
+            <razonSocial t-esc="ats.company_id.name" />
+            <Anio t-esc="ats.name.year" />
+            <Mes  t-esc="ats.name.month" />
+            <numEstabRuc /> <!--es la cantidad de establecimientos que han vendido, si tengo el 001 y 003 entonces equivale a dos establecimeintos, 002-->            
+            <totalVentas></totalVentas>
+            <codigoOperativo t-esc="IVA" />
+            <t t-foreach="ats._get_records" t-as="move_docs">
+                <t t-set="move_type" t-value="move_docs[0]" />
+                <t t-set="docs" t-value="move_docs[1]" />
+                <t t-if="move_type[0] != 'annull'">
+                    <t t-if="move_type[1] == 'in_invoice'">
+                        <t t-call="l10n_ec_ats.purchase_ats_template" />
+                    </t>
+                    <t t-if="move_type[1] == 'out_invoice'">
+                        <t t-call="l10n_ec_ats.sale_ats_template" />
+                    </t>
+                </t>
+                <t t-else="move_type[0] == 'annull'">
+                    <t t-call="l10n_ec_ats.null_ats_template" />
+                </t>
+            </t>
+            <totalVentas>totalVentas</totalVentas>
+        </iva>
+    </template>
+</odoo>

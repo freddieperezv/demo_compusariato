@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Analytic Groups -->
+        <record id="analytic_group_departments_nmit" model="account.analytic.group">
+            <field name="name">Departamentos</field>
+        </record>
+        <!-- Analytic Accounts -->      
+        <record id="analytic_administrativo_nmit" model="account.analytic.account">
+            <field name="name">Dep. Administración</field>
+            <field name="group_id" ref="demo_compusariato_nmit.analytic_group_departments_nmit"/>
+        </record>
+        <record id="analytic_marketing_nmit" model="account.analytic.account">
+            <field name="name">Dep. Marketing</field>
+            <field name="group_id" ref="demo_compusariato_nmit.analytic_group_departments_nmit"/>
+        </record>
+        <record id="analytic_comercial_nmit" model="account.analytic.account">
+            <field name="name">Dep. Comercial</field>
+            <field name="group_id" ref="demo_compusariato_nmit.analytic_group_departments_nmit"/>
+        </record>        
+        <record id="analytic_compras_nmit" model="account.analytic.account">
+            <field name="name">Dep. Compras</field>
+            <field name="group_id" ref="demo_compusariato_nmit.analytic_group_departments_nmit"/>
+        </record>
+        <record id="analytic_sistemas_nmit" model="account.analytic.account">
+            <field name="name">Dep. Sistemas</field>
+            <field name="group_id" ref="demo_compusariato_nmit.analytic_group_departments_nmit"/>
+        </record>   
+        <record id="analytic_investigacion_nmit" model="account.analytic.account">
+            <field name="name">Presupuesto Investigación y Desarrollo </field>
+        </record>              
+    </data>
+</odoo>

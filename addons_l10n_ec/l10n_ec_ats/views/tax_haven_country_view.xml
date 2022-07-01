@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="nmit_tax_haven_country_view" model="ir.ui.view">
+        <field name="name">País   paraiso fiscal</field>
+        <field name="model">l10n.ec.tax.haven.country</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" string="País">
+                <field name="name" required="1"/>
+                <field name="code" required="1"/>
+                <field name="name2" required="1"/>
+                <field name="code2" required="1"/>
+                <field name="state" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

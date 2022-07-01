@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="invoice_ride_template" model="mail.template">
+    <field name="name">RIDE</field>
+    <field name="model_id" ref="l10n_ec_nmit.model_account_move"/>
+    <field name="subject">Electronic Invoice {{ object.name }}</field>
+    <field name="email_from">{{ (object.company_id.email or '') }}</field>
+    <field name="email_to">{{ (object.partner_id.email or '') }}</field>
+    <field name="report_template" ref="action_ride"/>
+    <field name="report_name">Invoice - {{ (object.name or '') }}</field>
+    <field name="lang">{{ object.partner_id.lang }}</field>
+    <field name="auto_delete" eval="False"/>
+    <field name="body_html" type="html">
+      <div>
+        Dear <t t-out="object.partner_id.name or ''" />,<br/>
+        Your electronic documents has been generated.<br/>
+        Those are your RIDE and your XML. <br/><br/>          
+      </div>
+    </field>
+  </record>
+  <record id="wh_ride_template" model="mail.template">
+    <field name="name">RIDE</field>
+    <field name="model_id" ref="l10n_ec_nmit.model_account_move"/>
+    <field name="subject">Electronic Withholding {{ object.name }}</field>
+    <field name="email_from">{{ (object.company_id.email or '') }}</field>
+    <field name="email_to">{{ (object.partner_id.email or '') }}</field>
+    <field name="report_template" ref="action_ride"/>
+    <field name="report_name">Invoice - {{ (object.name or '') }}</field>
+    <field name="lang">{{ object.partner_id.lang }}</field>
+    <field name="auto_delete" eval="False"/>
+    <field name="body_html" type="html">
+      <div>
+        Dear <t t-out="object.partner_id.name or ''" />,<br/>
+        Your electronic documents has been generated.<br/>
+        Those are your RIDE and your XML. <br/><br/>          
+      </div>
+    </field>
+  </record>  
+</odoo>
